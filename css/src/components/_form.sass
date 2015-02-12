@@ -1,0 +1,61 @@
+form	
+	input, textarea	
+		$image: "line.png"
+		display: block	
+		background-color: $color-white
+		-webkit-appearance: none
+		-moz-appearance: none			
+		appearance: none			
+		border-left: none
+		border-right: none 
+		border-bottom: 0
+		border-top: 2px
+		-webkit-border-image: image-url($image) 30 30 stretch
+		-moz-border-image: image-url($image) 30 30 stretch
+		border-image: image-url($image) 30 30 stretch
+		width: 100%
+		padding: 10px 0
+		margin: 0	
+		font-size: 110%
+		text-transform: none
+		color: $color-green
+		font-family: "Biko_Regular"
+	textarea
+		$image: "line.png"
+		-webkit-border-image: image-url($image) 30 30 stretch
+		-moz-border-image: image-url($image) 30 30 stretch
+		border-image: image-url($image) 30 30 stretch
+		height: 120px	
+		border-bottom: 2px
+	button		
+		font-size: 120%
+		padding: 5px 15px
+		color: $color-white
+		text-decoration: none
+		background: $color-grey-light
+		display: block
+		width: 76px
+		outline: none
+		border: none
+		margin-top: 30px
+		margin-bottom: 70px
+	button:hover
+		background: $color-blue
+
+	::-webkit-input-placeholder
+		color: $color-green
+		font-family: "Biko_Regular"
+	:-moz-placeholder
+		color: $color-green
+		font-family: "Biko_Regular"
+	::-moz-placeholder
+		color: $color-green
+		font-family: "Biko_Regular"
+	:-ms-input-placeholder
+		color: $color-green
+		font-family: "Biko_Regular"
+input:focus,
+select:focus,
+textarea:focus,
+button:focus
+	outline: none

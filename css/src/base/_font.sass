@@ -1,0 +1,38 @@
+//GENERETE BIKO FONTS
+$font-path-biko: '../font/Biko/'
+
+$font-families-biko: 'Biko_Black', 'Biko_Bold', 'Biko_Light-Restricted', 'Biko_Regular'
+
+@each $font-family in $font-families-biko 
+	@font-face 
+		font-family: $font-family
+		src: url($font-path-biko + $font-family + '.eot')
+		src: url($font-path-biko + $font-family + '.eot?#iefix') format('embedded-opentype'),url($font-path-biko + $font-family + '.otf') format('opentype'), url($font-path-biko + $font-family + '.woff') format('woff'), url($font-path-biko + $font-family + '.woff2') format('woff2'), url($font-path-biko + $font-family + '.ttf') format('truetype'), url($font-path-biko + $font-family + '.svg#' + $font-family) format('svg')
+		font-weight: normal
+		font-style: normal
+
+//GENERETE TYPOSTER FONTS
+$font-path-typoster: '../font/Typoster/'
+
+$font-families-typoster: 'Typoster_demo', 'Typoster_italic_demo', 'Typoster_outline_demo', 'Typoster_outline_italic_demo'
+
+@each $font-family in $font-families-typoster 
+	@font-face 
+		font-family: $font-family
+		src: url($font-path-typoster + $font-family + '.eot')
+		src: url($font-path-typoster + $font-family + '.eot?#iefix') format('embedded-opentype'),url($font-path-typoster + $font-family + '.otf') format('opentype'), url($font-path-typoster + $font-family + '.woff') format('woff'), url($font-path-typoster + $font-family + '.woff2') format('woff2'), url($font-path-typoster + $font-family + '.ttf') format('truetype'), url($font-path-typoster + $font-family + '.svg#' + $font-family) format('svg')
+		font-weight: normal
+		font-style: normal
+
+//GENERETE MASTOC FONTS
+$font-path-mastoc: '../font/Mastoc/'
+
+$font-families-mastoc: 'Mastoc_PersonalUseOnly'
+
+@each $font-family in $font-families-mastoc 
+	@font-face 
+		font-family: $font-family
+		src: url($font-path-mastoc + $font-family + '.eot')
+		src: url($font-path-mastoc + $font-family + '.eot?#iefix') format('embedded-opentype'), url($font-path-mastoc + $font-family + '.woff') format('woff'), url($font-path-mastoc + $font-family + '.woff2') format('woff2'), url($font-path-mastoc + $font-family + '.ttf') format('truetype'), url($font-path-mastoc + $font-family + '.svg#' + $font-family) format('svg')
+		font-weight: normal
+		font-style: normal

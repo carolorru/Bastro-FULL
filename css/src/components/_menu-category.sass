@@ -1,0 +1,68 @@
+.category 
+	padding: 10px 30px 0
+	margin-bottom: 20px
+	h4
+		font-size: 340%
+		text-align: center
+		margin-bottom: 20px
+	.img
+		display: block
+		margin: 0 auto
+		width: 100% !important
+		height: 200px !important
+		background-position: center center !important
+	.img1
+		$image: "icons/Icon_1_up.png"
+		+image-block($image)
+	.img2
+		$image: "icons/Icon_2_up.png"
+		+image-block($image)
+	.img3
+		$image: "icons/Icon_3_up.png"
+		+image-block($image)
+	.img4
+		$image: "icons/Icon_4_up.png"
+		+image-block($image)
+	.img5
+		$image: "icons/Icon_5_up.png"
+		+image-block($image)
+	.img6
+		$image: "icons/Icon_6_up.png"
+		+image-block($image)
+	a
+		font-size: 120%
+		padding: 5px 15px
+		color: $color-white
+		text-decoration: none
+		margin: 0 auto
+		background: $color-grey-light
+		display: block
+		width: 65px
+	a:hover
+		background: $color-blue
+
+.category:hover
+	background: $color-white
+	-webkit-box-shadow: 0px 6px 12px 2px rgba(1, 1, 1, 0.25)
+	-moz-box-shadow: 0px 6px 12px 2px rgba(1, 1, 1, 0.25)
+	box-shadow: 0px 6px 12px 2px rgba(1, 1, 1, 0.25)
+	h4
+		color: $color-green
+	.img1
+		$image: "icons/Icon_1_over.png"
+		+image-block($image)
+	.img2
+		$image: "icons/Icon_2_over.png"
+		+image-block($image)
+	.img3
+		$image: "icons/Icon_3_over.png"
+		+image-block($image)
+	.img4
+		$image: "icons/Icon_4_over.png"
+		+image-block($image)
+	.img5
+		$image: "icons/Icon_5_over.png"
+		+image-block($image)
+	.img6
+		$image: "icons/Icon_6_over.png"
+		+image-block($image)

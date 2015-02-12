@@ -1,0 +1,23 @@
+footer
+	display: block
+	position: fixed
+	bottom: 0
+	background: $background-yellow
+	color: $color-white
+	height: 40px
+	width: 100%
+	.list
+		float: right
+		ul
+			margin: 0
+		li
+			display: table-cell
+			padding: 0 20px
+			line-height: 40px
+		li:nth-child(3)
+			padding-right: 0
+	.logo
+		$image: "logo-footer.png"
+		+image-block($image)	
+		float: left
+		margin: 6px 0 5px

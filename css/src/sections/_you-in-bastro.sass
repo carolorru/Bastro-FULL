@@ -1,0 +1,95 @@
+#you-in-bastro
+	background: $background-white
+	h2
+		width: 320px
+	.item
+		padding: 0
+		margin: 0 15px
+		img
+			-webkit-filter: grayscale(100%)
+			-moz-filter: grayscale(100%)
+			-ms-filter: grayscale(100%)
+			-o-filter: grayscale(100%)
+			filter: grayscale(100%)
+		h4, p, a
+			text-align: center
+			width: 95%
+			margin: 0 auto
+		h4
+			margin-top: 20px
+			margin-bottom: 20px
+			line-height: 80%
+		p
+			font-size: 120%
+		a, button
+			font-size: 120%
+			padding: 7px 15px
+			color: $color-white
+			text-decoration: none
+			background: $color-grey-light
+			display: block
+			width: 80px
+			margin: 30px auto 0
+			outline: none
+			border: none
+			cursor: pointer
+		a:hover, button:hover
+			background: $color-blue
+
+	.item:hover
+		background: $color-white
+		-webkit-box-shadow: 0px 6px 12px 2px rgba(1, 1, 1, 0.25)
+		-moz-box-shadow: 0px 6px 12px 2px rgba(1, 1, 1, 0.25)
+		box-shadow: 0px 6px 12px 2px rgba(1, 1, 1, 0.25)
+		img
+			-webkit-filter: grayscale(0%)
+			-moz-filter: grayscale(0%)
+			-ms-filter: grayscale(0%)
+			-o-filter: grayscale(0%)
+			filter: grayscale(0%)
+		h4
+			color: $color-green
+	.send-email
+		display: none
+		position: absolute
+		top: 0
+		left: 0
+		width: 100%
+		height: 100%
+		background: $color-blue
+		color: $color-white		
+		h4
+			color: $color-white !important
+		input, textarea	
+			display: block	
+			background-color: $color-white
+			-webkit-appearance: none
+			-moz-appearance: none			
+			appearance: none			
+			border: none			
+			width: 90%
+			padding: 10px
+			margin: 20px 5% 	
+			font-size: 110%
+			text-transform: none
+			color: $color-grey-light
+			font-family: "Biko_Regular"
+		
+		button, button:hover, a, a:hover
+			background: $color-white
+			color: $color-blue
+			position: absolute
+			bottom: 0
+			left: 0
+			margin: 0 10px
+		a, a:hover
+			background: $color-blue
+			border: 1px solid $color-white
+			border-bottom: none
+			color: $color-white
+			right: 0
+			left: auto
+			line-height: 122%
+		
+.slick-list
+	padding: 5px 0 20px !important
