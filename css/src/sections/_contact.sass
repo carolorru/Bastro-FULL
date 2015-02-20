@@ -12,3 +12,32 @@
 		font-size: 135%
 		font-weight: lighter
 		color: $color-black
+.social
+	margin-bottom: 20px
+	.face
+		$image: "face.png"
+		+image-block($image)
+		+ir
+	.twitter
+		$image: "twitter.png"
+		+image-block($image)
+		+ir
+	.pinterest
+		$image: "pinterest.png"
+		+image-block($image)
+		+ir
+	.face:hover
+		$image: "face-over.png"
+		+image-block($image)
+		+ir
+	.twitter:hover
+		$image: "twitter-over.png"
+		+image-block($image)
+		+ir
+	.pinterest:hover
+		$image: "pinterest-over.png"
+		+image-block($image)
+		+ir
+	a
+		display: table-cell !important
+		padding: 0px 20px

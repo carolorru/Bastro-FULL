@@ -1,7 +1,7 @@
 #you-in-bastro
 	background: $background-white
 	h2
-		width: 320px
+		width: 270px
 	.item
 		padding: 0
 		margin: 0 15px
@@ -21,6 +21,7 @@
 			line-height: 80%
 		p
 			font-size: 120%
+			line-height: 110%
 		a, button
 			font-size: 120%
 			padding: 7px 15px
@@ -93,3 +94,19 @@
 		
 .slick-list
 	padding: 5px 0 20px !important
+.slick-prev
+	$image: "seta-l.png"
+	+image-block($image)
+	+ir
+	position: absolute
+	margin-top: -42px
+	top: 50%
+	left: 0
+.slick-next
+	$image: "seta-r.png"
+	+image-block($image)
+	+ir
+	position: absolute
+	margin-top: -42px
+	top: 50%
+	right: 0

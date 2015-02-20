@@ -15,485 +15,1180 @@
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon"/>
 
     <!-- CSS -->
-    <link rel="stylesheet" src="//normalize-css.googlecode.com/svn/trunk/normalize.css" />
+    <link rel="stylesheet" type="text/css" src="//normalize-css.googlecode.com/svn/trunk/normalize.css" />
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/jquery.slick/1.4.1/slick.css"/>
     <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <style type="text/css">
+      #html5Loader{
+        top:0;
+        left:0;
+        background-color:black;
+        background-color:rgba(255,255,255,0.95);
+        position:fixed;
+        z-index:99999999999;
+      }
+      #html5Loader .fallback {
+        top:50%;
+        position:absolute;
+        text-align:center;
+        width:100%;
+        color:#ffcc06;
+        vertical-align: middle;
+        display: block;
+        font-style: normal;
+      }
+    </style>
+
+    <!-- LOAD -->        
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script> 
+    <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>   
+    <script type="text/javascript" src="js/lib/jquery.html5Loader.circular.js"></script>
+    <script type="text/javascript" src="js/lib/jquery.html5Loader.min.js"></script>
     
   </head>
   <body>
+    <div id="html5Loader"></div>
+    <div id="wrapper">
+      <!-- HEADER -->
+      <header>
+        <nav class="navbar navbar-default container">
+          <!-- Brand and toggle get grouped for better mobile display -->
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed " data-toggle="collapse" data-target="#bs-navbar-collapse-1">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#"><h1>Bastrô</h1></a>
+          </div>
 
-    
-    <!-- HEADER -->
-    <header>
-      <nav class="navbar navbar-default container">
-        <!-- Brand and toggle get grouped for better mobile display -->
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed " data-toggle="collapse" data-target="#bs-navbar-collapse-1">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="#"><h1>Bastrô</h1></a>
-        </div>
-
-        <div class="collapse navbar-collapse" id="bs-navbar-collapse-1">
-          <ul class="nav navbar-nav">
-            <li><a href="javascript:;" attr-href="#home">Home</a></li>
-            <li><a href="javascript:;" attr-href="#highlights">Dieferenciais</a></li>
-            <li><a href="javascript:;" attr-href="#the-bastro">O Bastrô</a></li>
-            <li><a href="javascript:;" attr-href="#menu">Cardápio</a></li>
-            <li><a href="javascript:;" attr-href="#you-in-bastro">Você no Bastrô</a></li>
-            <li><a href="javascript:;" attr-href="#contact">Contato</a></li>
-          </ul>
-        </div>
-      </nav>
-    </header>
-    <!-- END HEADER -->
-    <div class="torso">
-      
-      <!-- HOME -->
-      <section id="home">  
-        <div id="slide-01" class="carousel slide container-fluid" data-ride="carousel">           
-          <!-- Indicators -->
-          <ol class="carousel-indicators">
-            <li data-target="#slide-01" data-slide-to="0" class="active"></li>
-            <li data-target="#slide-01" data-slide-to="1"></li>
-            <li data-target="#slide-01" data-slide-to="2"></li>
-            <li data-target="#slide-01" data-slide-to="3"></li>
-          </ol>
-          <!-- Wrapper for slides -->
-          <div class="carousel-inner" role="listbox">
-            <div class="item active">            
-              <img src="data/home/1.jpg" align="center" width="100%">              
-            </div>
-            <div class="item">              
-              <img src="data/home/1.jpg" align="center" width="100%">
-            </div>
-            <div class="item">            
-              <img src="data/home/1.jpg" align="center" width="100%">
-            </div>
-            <div class="item">          
-              <img src="data/home/1.jpg" align="center" width="100%">
-            </div>
-          </div>
-        </div>
-
-      </section>
-      <!-- END HOME -->
-      
-      <!-- MENU -->
-      <section id="menu">
-        <div class="title wow fadeInUp" data-wow-offset="50">
-          <div class="container">
-            <h2>Cardápio</h2>
-          </div>
-        </div>
-        <div class="blackboard">
-          <div class="container">
-            <div class="col-md-4">
-              <h4>Cozido de Filé Mignon</h4>
-              <p>Acompanhado de arroz branco e salada de folhas verdes</p>
-            </div>
-            <div class="col-md-4">
-              <h3>Prato do Dia</h3>
-              <img src="data/prato-do-dia/1.png">
-            </div>
-            <div class="col-md-4">
-              <h4>Bife de Chorizo</h4>
-              <p>Acompanhado de batata gratinada e arroz à grega</p>
-            </div>
-          </div>
-        </div>
-        <div class="content">
-          <div class="container">
-            <div class="category col-md-4">
-              <h4>Cafés</h4>
-              <div class="img img1"></div>
-              <a href="javascript:;">Abrir</a>
-            </div>
-            <div class="category col-md-4">
-              <h4>Sandubas</h4>
-              <div class="img img2"></div>
-              <a href="javascript:;">Abrir</a>
-            </div>
-            <div class="category col-md-4">
-              <h4>Bebidas</h4>
-              <div class="img img3"></div>
-              <a href="javascript:;">Abrir</a>
-            </div>
-            <div class="category col-md-4">
-              <h4>Saladas & Quiches</h4>
-              <div class="img img4"></div>
-              <a href="javascript:;">Abrir</a>
-            </div>
-            <div class="category col-md-4">
-              <h4>Pães & Salgados</h4>
-              <div class="img img5"></div>
-              <a href="javascript:;">Abrir</a>
-            </div>
-            <div class="category col-md-4">
-              <h4>Sobremesas</h4>
-              <div class="img img6"></div>
-              <a href="javascript:;">Abrir</a>
-            </div>
-          </div>
-        </div>
-      </section>
-      <!-- END MENU -->
-
-      <!-- HIGHLIGHTS -->
-      <section id="highlights">
-        <div class="title wow fadeInUp" data-wow-offset="50">
-          <div class="container">
-            <h2>Diferenciais</h2>
-          </div>
-        </div>        
-        <div class="content">
-          <div class="container">
-            <div class="highlight col-md-4">
-              <hr class="up">
-              <h4>Eventos</h4>
-              <p><b>Garanta uma festa inesquecível no Bastrô!</b></p>
-              <p>Oferecemos locação para festas e comemorações. Entre em contato conosco e faça a sua reserva. </p>
-              <hr class="down">
-            </div>
-            <div class="highlight highlight-center col-md-4">
-              <hr class="up">
-              <h4>Galeria de Arte</h4>
-              <p><b>Um novo artista a cada seis meses</b></p>
-              <p>Nosso espaço conta com uma galeria para aqueles apaixonados por fotografia e arte. Quer expor o seu trabalho também? Entre em contato!</p>
-              <hr class="down">
-            </div>
-            <div class="highlight col-md-4">
-              <hr class="up">
-              <h4>Produtos Orgânicos</h4>
-              <p><b>Alimentação saudável é marca registrada do Bastrô</b></p>
-              <p>Em nosso restaurante, os alimentos são livres de agrotóxicos e outros produtos químicos, contribuindo para sua saúde e bem-estar. Visite a nossa cozinha! </p>
-              <hr class="down">
-            </div>           
-        </div>
-      </section>
-      <!-- END HIGHLIGHTS -->
-
-      <!-- THE BASTRO -->
-      <section id="the-bastro"> 
-        <div class="title wow fadeInUp" data-wow-offset="50">
-          <div class="container">
-            <h2>O Bastrô</h2>
-          </div>
-        </div>   
-        <div id="slide-02" class="carousel slide container-fluid" data-ride="carousel">           
-          <!-- Indicators -->
-          <ol class="carousel-indicators">
-            <li data-target="#slide-02" data-slide-to="0" class="active"></li>
-            <li data-target="#slide-02" data-slide-to="1"></li>
-            <li data-target="#slide-02" data-slide-to="2"></li>
-            <li data-target="#slide-02" data-slide-to="3"></li>
-          </ol>
-          <!-- Wrapper for slides -->
-          <div class="carousel-inner" role="listbox">
-            <div class="item active">            
-              <img src="data/bastro/1.jpg" align="center" width="100%">              
-            </div>
-            <div class="item">              
-              <img src="data/bastro/1.jpg" align="center" width="100%">
-            </div>
-            <div class="item">            
-              <img src="data/bastro/1.jpg" align="center" width="100%">
-            </div>
-            <div class="item">          
-              <img src="data/bastro/1.jpg" align="center" width="100%">
-            </div>
-          </div>
-        </div>
-
-      </section>
-      <!-- END THE BASTRO -->
-
-      <!-- YOU-IN-BASTRO -->
-      <section id="you-in-bastro"> 
-        <div class="title wow fadeInUp" data-wow-offset="50">
-          <div class="container">
-            <h2>Você no Bastrô</h2>
-          </div>
-        </div>   
-        <div class="container-fluid center" data-slick='{"slidesToScroll": 1}'>           
-          <div class="item col-md-4" data-item="1">
-            <img src="data/voce-no-bastro/1.jpg" align="center" width="100%">
-            <h4>Nome do Patro a</h4>
-            <p><b>Trabalhamos apenas com café de excelente qualidade</b></p>
-            <a class="like" href="javascript:;">Gostei</a>
-            <div class="send-email">
-              <h4>Gostou?</h4>
-              <p><b>Mande o seu e-mail pra gente e nós avisaremos o dia que esse prato estará disponível novamente na casa! :-) </b></p>
-              <input type="text" placeholder="nome@mail.com.br">
-              <button>Enviar</button>
-              <a class="close" href="javascript:;">Fechar</a>
-            </div>            
-          </div>
-          <div class="item col-md-4" data-item="2">
-            <img src="data/voce-no-bastro/1.jpg" align="center" width="100%">
-            <h4>Nome do Patro b</h4>
-            <p><b>Trabalhamos apenas com café de excelente qualidade</b></p>
-            <a class="like" href="javascript:;">Gostei</a>
-            <div class="send-email">
-              <h4>Gostou?</h4>
-              <p><b>Mande o seu e-mail pra gente e nós avisaremos o dia que esse prato estará disponível novamente na casa! :-) </b></p>
-              <input type="text" placeholder="nome@mail.com.br">
-              <button>Enviar</button>
-              <a class="close" href="javascript:;">Fechar</a>
-            </div>
-          </div>
-          <div class="item col-md-4" data-item="3">
-            <img src="data/voce-no-bastro/1.jpg" align="center" width="100%">
-            <h4>Nome do Patro c</h4>
-            <p><b>Trabalhamos apenas com café de excelente qualidade</b></p>
-            <a class="like" href="javascript:;">Gostei</a>
-            <div class="send-email">
-              <h4>Gostou?</h4>
-              <p><b>Mande o seu e-mail pra gente e nós avisaremos o dia que esse prato estará disponível novamente na casa! :-) </b></p>
-              <input type="text" placeholder="nome@mail.com.br">
-              <button>Enviar</button>
-              <a class="close" href="javascript:;">Fechar</a>
-            </div>
-          </div>
-          <div class="item col-md-4" data-item="4">
-            <img src="data/voce-no-bastro/1.jpg" align="center" width="100%">
-            <h4>Nome do Patro d</h4>
-            <p><b>Trabalhamos apenas com café de excelente qualidade</b></p>
-            <a class="like" href="javascript:;">Gostei</a>
-            <div class="send-email">
-              <h4>Gostou?</h4>
-              <p><b>Mande o seu e-mail pra gente e nós avisaremos o dia que esse prato estará disponível novamente na casa! :-) </b></p>
-              <input type="text" placeholder="nome@mail.com.br">
-              <button>Enviar</button>
-              <a class="close" href="javascript:;">Fechar</a>
-            </div>
-          </div>
-          <div class="item col-md-4" data-item="5">
-            <img src="data/voce-no-bastro/1.jpg" align="center" width="100%">
-            <h4>Nome do Patro e</h4>
-            <p><b>Trabalhamos apenas com café de excelente qualidade</b></p>
-            <a class="like" href="javascript:;">Gostei</a>
-            <div class="send-email">
-              <h4>Gostou?</h4>
-              <p><b>Mande o seu e-mail pra gente e nós avisaremos o dia que esse prato estará disponível novamente na casa! :-) </b></p>
-              <input type="text" placeholder="nome@mail.com.br">
-              <button>Enviar</button>
-              <a class="close" href="javascript:;">Fechar</a>
-            </div>
-          </div>
-          <div class="item col-md-4" data-item="6">
-            <img src="data/voce-no-bastro/1.jpg" align="center" width="100%">
-            <h4>Nome do Patro f</h4>
-            <p><b>Trabalhamos apenas com café de excelente qualidade</b></p>
-            <a class="like" href="javascript:;">Gostei</a>
-            <div class="send-email">
-              <h4>Gostou?</h4>
-              <p><b>Mande o seu e-mail pra gente e nós avisaremos o dia que esse prato estará disponível novamente na casa! :-) </b></p>
-              <input type="text" placeholder="nome@mail.com.br">
-              <button>Enviar</button>
-              <a class="close" href="javascript:;">Fechar</a>
-            </div>
-          </div>
-          <div class="item col-md-4" data-item="7">
-            <img src="data/voce-no-bastro/1.jpg" align="center" width="100%">
-            <h4>Nome do Patro g</h4>
-            <p><b>Trabalhamos apenas com café de excelente qualidade</b></p>
-            <a class="like" href="javascript:;">Gostei</a>
-            <div class="send-email">
-              <h4>Gostou?</h4>
-              <p><b>Mande o seu e-mail pra gente e nós avisaremos o dia que esse prato estará disponível novamente na casa! :-) </b></p>
-              <input type="text" placeholder="nome@mail.com.br">
-              <button>Enviar</button>
-              <a class="close" href="javascript:;">Fechar</a>
-            </div>
-          </div>
-          <div class="item col-md-4" data-item="8">
-            <img src="data/voce-no-bastro/1.jpg" align="center" width="100%">
-            <h4>Nome do Patro h</h4>
-            <p><b>Trabalhamos apenas com café de excelente qualidade</b></p>
-            <a class="like" href="javascript:;">Gostei</a>
-            <div class="send-email">
-              <h4>Gostou?</h4>
-              <p><b>Mande o seu e-mail pra gente e nós avisaremos o dia que esse prato estará disponível novamente na casa! :-) </b></p>
-              <input type="text" placeholder="nome@mail.com.br">
-              <button>Enviar</button>
-              <a class="close" href="javascript:;">Fechar</a>
-            </div>
-          </div>
-          <div class="item col-md-4" data-item="9">
-            <img src="data/voce-no-bastro/1.jpg" align="center" width="100%">
-            <h4>Nome do Patro i</h4>
-            <p><b>Trabalhamos apenas com café de excelente qualidade</b></p>
-            <a class="like" href="javascript:;">Gostei</a>
-            <div class="send-email">
-              <h4>Gostou?</h4>
-              <p><b>Mande o seu e-mail pra gente e nós avisaremos o dia que esse prato estará disponível novamente na casa! :-) </b></p>
-              <input type="text" placeholder="nome@mail.com.br">
-              <button>Enviar</button>
-              <a class="close" href="javascript:;">Fechar</a>
-            </div>
-          </div>
-          <div class="item col-md-4" data-item="10">
-            <img src="data/voce-no-bastro/1.jpg" align="center" width="100%">
-            <h4>Nome do Patro j</h4>
-            <p><b>Trabalhamos apenas com café de excelente qualidade</b></p>
-            <a class="like" href="javascript:;">Gostei</a>
-            <div class="send-email">
-              <h4>Gostou?</h4>
-              <p><b>Mande o seu e-mail pra gente e nós avisaremos o dia que esse prato estará disponível novamente na casa! :-) </b></p>
-              <input type="text" placeholder="nome@mail.com.br">
-              <button>Enviar</button>
-              <a class="close" href="javascript:;">Fechar</a>
-            </div>
-          </div>
-        </div>
-
-      </section>
-      <!-- YOU-IN-BASTRO -->
-
-
-
-      <!-- MAPS -->
-      <section id="map">
-        <div class="title wow fadeInUp" data-wow-offset="50">
-          <div class="container">
-            <h2>Mapa</h2>
-          </div>
-        </div> 
-
-        <div class="map container-fluid">
-          <div id="map-canvas" class="google col-md-12"></div>          
-        </div>
-
-      </section>
-      <!-- END MAPS -->
-
-      <!-- CONTACT -->
-      <section id="contact"> 
-        <div class="title wow fadeInUp" data-wow-offset="50">
-          <div class="container">
-            <h2>Contato</h2>
-          </div>
-        </div>   
-        <div class="content">
-          <div class="container">          
-            <div class="col-md-6">
-              <p><b>Localização</b><br>
-              Rua Joaquim Floriano, 122 - Itaim Bibi, SP</p>
-              <p><b>Telefone</b><br>
-              (11) 99999-9999</p>
-              <p><b>Horário de Funcionamento</b><br>
-              7hs até as 17hs de seg a sex. </p>
-              <p><b>Redes Sociais</b></p>              
-            </div>
-            <div class="col-md-6">
-              <form id="formRegister" name="formRegister">
-                  <input class="name" type="text" name="nome" id="nome" placeholder="Nome">
-
-                  <input class="email" type="text" name="email" id="email" placeholder="Email">
-
-                  <input class="assunto" type="text" name="assunto" id="assunto" placeholder="Assunto">
-                
-                  <textarea name="mensagem" id="mensagem">Menssagem</textarea>
-                  <button>Enviar</button>
-                
-              </form>
-            </div>
-          </div>
-        </div>
-
-      </section>
-      <!-- END CONTACT -->
-      
-      <!-- FOOTER -->
-      <footer>
-        <div class="container">
-          <div class="logo"></div>
-          <div class="list">
-            <ul>
-              <li>Rua Joaquim Floriano, 122 - Itaim Bibi, SP</li>
-              <li>(11) 99999-9999</li>
-              <li>7hs até as 17hs de seg a sex.</li>
+          <div class="collapse navbar-collapse" id="bs-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+              <li><a href="#" attr-href="#home">Home</a></li>
+              <li><a href="javascript:;" attr-href="#menu">Cardápio</a></li>
+              <li><a href="javascript:;" attr-href="#highlights">Dieferenciais</a></li>
+              <li><a href="javascript:;" attr-href="#the-bastro">O Bastrô</a></li>            
+              <li><a href="javascript:;" attr-href="#you-in-bastro">Você no Bastrô</a></li>
+              <li><a href="javascript:;" attr-href="#contact">Contato</a></li>
             </ul>
           </div>
-        </div>
-      </footer>
-      <!-- END FOOTER -->
+        </nav>
+      </header>
+      <!-- END HEADER -->
+      <div class="torso">
+        
+        <!-- HOME -->
+        <section id="home">  
+          <div class="title"></div>
+          <div id="slide-01" class="carousel slide container-fluid hidden-xs" data-ride="carousel">           
+            <!-- Indicators -->
+            <ol class="carousel-indicators">
+              <li data-target="#slide-01" data-slide-to="0" class="active"></li>
+              <li data-target="#slide-01" data-slide-to="1"></li>
+              <li data-target="#slide-01" data-slide-to="2"></li>
+              <li data-target="#slide-01" data-slide-to="3"></li>
+            </ol>
+            <!-- Wrapper for slides -->
+            <div class="carousel-inner" role="listbox">
+              <div class="item active">            
+                <img src="data/home/1.jpg" align="center" width="100%">              
+              </div>
+              <div class="item">              
+                <img src="data/home/1.jpg" align="center" width="100%">
+              </div>
+              <div class="item">            
+                <img src="data/home/1.jpg" align="center" width="100%">
+              </div>
+              <div class="item">          
+                <img src="data/home/1.jpg" align="center" width="100%">
+              </div>
+            </div>
+          </div>
 
-      <div id="modal"><p></p></div>
-      <div class="shadown"></div>
+          <div id="slide-03" class="carousel slide container-fluid visible-xs" data-ride="carousel">           
+            <!-- Indicators -->
+            <ol class="carousel-indicators">
+              <li data-target="#slide-03" data-slide-to="0" class="active"></li>
+              <li data-target="#slide-03" data-slide-to="1"></li>
+              <li data-target="#slide-03" data-slide-to="2"></li>
+              <li data-target="#slide-03" data-slide-to="3"></li>
+            </ol>
+            <!-- Wrapper for slides -->
+            <div class="carousel-inner" role="listbox">
+              <div class="item active">            
+                <img src="data/home-v2/1.jpg" align="center" width="100%">              
+              </div>
+              <div class="item">              
+                <img src="data/home-v2/1.jpg" align="center" width="100%">
+              </div>
+              <div class="item">            
+                <img src="data/home-v2/1.jpg" align="center" width="100%">
+              </div>
+              <div class="item">          
+                <img src="data/home-v2/1.jpg" align="center" width="100%">
+              </div>
+            </div>
+          </div>
+
+        </section>
+        <!-- END HOME -->
+        
+        <!-- MENU -->
+        <section id="menu">
+          <div class="title wow fadeInUp" data-wow-offset="50">
+            <div class="container">
+              <h2>Cardápio</h2>
+            </div>
+          </div>
+          <div class="blackboard">
+            <div class="container">
+              <div class="col-md-12"><h3>Prato do Dia</h3></div>
+              <div class="col-md-4 col-sm-6">
+                <h4>Cozido de Filé Mignon</h4>
+                <p>Acompanhado de arroz branco e salada de folhas verdes</p>
+              </div>
+              <div class="col-md-4 hidden-sm hidden-xs">              
+                <img class=" hidden-sm hidden-xs" src="data/prato-do-dia/1.png">
+              </div>
+              <div class="col-md-4 col-sm-6">
+                <h4>Bife de Chorizo</h4>
+                <p class="last-child">Acompanhado de batata gratinada e arroz à grega</p>
+              </div>
+            </div>
+          </div>
+          <div class="content">
+            <div class="container">
+              <div class="category col-md-4 col-sm-6">
+                <h4>Cafés</h4>
+                <div class="img img1 hidden-xs"></div>
+                <a href="javascript:;" attr-modal="cafes" class="hidden-xs">Abrir</a>
+              </div>
+              <div class="category col-md-4 col-sm-6">
+                <h4>Sandubas</h4>
+                <div class="img img2 hidden-xs"></div>
+                <a href="javascript:;" attr-modal="sandubas" class="hidden-xs">Abrir</a>
+              </div>
+              <div class="category col-md-4 col-sm-6">
+                <h4>Bebidas</h4>
+                <div class="img img3 hidden-xs"></div>
+                <a href="javascript:;" attr-modal="bebidas" class="hidden-xs">Abrir</a>
+              </div>
+              <div class="category col-md-4 col-sm-6">
+                <h4>Saladas & Quiches</h4>
+                <div class="img img4 hidden-xs"></div>
+                <a href="javascript:;" attr-modal="saladas-quiches" class="hidden-xs">Abrir</a>
+              </div>
+              <div class="category col-md-4 col-sm-6">
+                <h4>Pães & Salgados</h4>
+                <div class="img img5 hidden-xs"></div>
+                <a href="javascript:;" attr-modal="paes-salgados" class="hidden-xs">Abrir</a>
+              </div>
+              <div class="category col-md-4 col-sm-6">
+                <h4>Sobremesas</h4>
+                <div class="img img6 hidden-xs"></div>
+                <a href="javascript:;" attr-modal="sobremesas" class="hidden-xs">Abrir</a>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- END MENU -->
+
+        <!-- HIGHLIGHTS -->
+        <section id="highlights">
+          <div class="title wow fadeInUp" data-wow-offset="50">
+            <div class="container">
+              <h2>Diferenciais</h2>
+            </div>
+          </div>        
+          <div class="content">
+            <div class="container">
+              <div class="highlight col-md-4 col-sm-4">
+                <hr class="up">
+                <h4>Eventos</h4>
+                <p><b>Garanta uma festa inesquecível no Bastrô!</b></p>
+                <p>Oferecemos locação para festas e comemorações. Entre em contato conosco e faça a sua reserva. </p>
+                <hr class="down">
+              </div>
+              <div class="highlight highlight-center col-md-4 col-sm-4">
+                <hr class="up">
+                <h4>Galeria de Arte</h4>
+                <p><b>Um novo artista a cada seis meses</b></p>
+                <p>Nosso espaço conta com uma galeria para aqueles apaixonados por fotografia e arte. Quer expor o seu trabalho também? Entre em contato!</p>
+                <hr class="down">
+              </div>
+              <div class="highlight col-md-4 col-sm-4">
+                <hr class="up">
+                <h4>Produtos Orgânicos</h4>
+                <p><b>Alimentação saudável é marca registrada do Bastrô</b></p>
+                <p>Em nosso restaurante, os alimentos são livres de agrotóxicos e outros produtos químicos, contribuindo para sua saúde e bem-estar. Visite a nossa cozinha! </p>
+                <hr class="down">
+              </div>           
+          </div>
+        </section>
+        <!-- END HIGHLIGHTS -->
+
+        <!-- THE BASTRO -->
+        <section id="the-bastro"> 
+          <div class="title wow fadeInUp" data-wow-offset="50">
+            <div class="container">
+              <h2>O Bastrô</h2>
+            </div>
+          </div>   
+          <div id="slide-02" class="carousel slide container-fluid" data-ride="carousel">           
+            <!-- Indicators -->
+            <ol class="carousel-indicators">
+              <li data-target="#slide-02" data-slide-to="0" class="active"></li>
+              <li data-target="#slide-02" data-slide-to="1"></li>
+              <li data-target="#slide-02" data-slide-to="2"></li>
+              <li data-target="#slide-02" data-slide-to="3"></li>
+            </ol>
+            <!-- Wrapper for slides -->
+            <div class="carousel-inner" role="listbox">
+              <div class="item active">            
+                <img src="data/bastro/1.jpg" align="center" width="100%">              
+              </div>
+              <div class="item">              
+                <img src="data/bastro/1.jpg" align="center" width="100%">
+              </div>
+              <div class="item">            
+                <img src="data/bastro/1.jpg" align="center" width="100%">
+              </div>
+              <div class="item">          
+                <img src="data/bastro/1.jpg" align="center" width="100%">
+              </div>
+            </div>
+          </div>
+
+        </section>
+        <!-- END THE BASTRO -->
+
+        <!-- YOU-IN-BASTRO -->
+        <section id="you-in-bastro"> 
+          <div class="title wow fadeInUp" data-wow-offset="50">
+            <div class="container">
+              <h2>Você no Bastrô</h2>
+            </div>
+          </div>   
+          <div class="container-fluid center" data-slick='{"slidesToScroll": 1}'>           
+            <div class="item col-md-4" data-item="1">
+              <img src="data/voce-no-bastro/1.jpg" align="center" width="100%">
+              <h4>Nome do Patro a</h4>
+              <p><b>Trabalhamos apenas com café de excelente qualidade</b></p>
+              <a class="like" href="javascript:;">Gostei</a>
+              <div class="send-email">
+                <h4>Gostou?</h4>
+                <p><b>Mande o seu e-mail pra gente e nós avisaremos o dia que esse prato estará disponível novamente na casa! :-) </b></p>
+                <input type="text" placeholder="nome@mail.com.br">
+                <button>Enviar</button>
+                <a class="close" href="javascript:;">Fechar</a>
+              </div>            
+            </div>
+            <div class="item col-md-4" data-item="2">
+              <img src="data/voce-no-bastro/1.jpg" align="center" width="100%">
+              <h4>Nome do Patro b</h4>
+              <p><b>Trabalhamos apenas com café de excelente qualidade</b></p>
+              <a class="like" href="javascript:;">Gostei</a>
+              <div class="send-email">
+                <h4>Gostou?</h4>
+                <p><b>Mande o seu e-mail pra gente e nós avisaremos o dia que esse prato estará disponível novamente na casa! :-) </b></p>
+                <input type="text" placeholder="nome@mail.com.br">
+                <button>Enviar</button>
+                <a class="close" href="javascript:;">Fechar</a>
+              </div>
+            </div>
+            <div class="item col-md-4" data-item="3">
+              <img src="data/voce-no-bastro/1.jpg" align="center" width="100%">
+              <h4>Nome do Patro c</h4>
+              <p><b>Trabalhamos apenas com café de excelente qualidade</b></p>
+              <a class="like" href="javascript:;">Gostei</a>
+              <div class="send-email">
+                <h4>Gostou?</h4>
+                <p><b>Mande o seu e-mail pra gente e nós avisaremos o dia que esse prato estará disponível novamente na casa! :-) </b></p>
+                <input type="text" placeholder="nome@mail.com.br">
+                <button>Enviar</button>
+                <a class="close" href="javascript:;">Fechar</a>
+              </div>
+            </div>
+            <div class="item col-md-4" data-item="4">
+              <img src="data/voce-no-bastro/1.jpg" align="center" width="100%">
+              <h4>Nome do Patro d</h4>
+              <p><b>Trabalhamos apenas com café de excelente qualidade</b></p>
+              <a class="like" href="javascript:;">Gostei</a>
+              <div class="send-email">
+                <h4>Gostou?</h4>
+                <p><b>Mande o seu e-mail pra gente e nós avisaremos o dia que esse prato estará disponível novamente na casa! :-) </b></p>
+                <input type="text" placeholder="nome@mail.com.br">
+                <button>Enviar</button>
+                <a class="close" href="javascript:;">Fechar</a>
+              </div>
+            </div>
+            <div class="item col-md-4" data-item="5">
+              <img src="data/voce-no-bastro/1.jpg" align="center" width="100%">
+              <h4>Nome do Patro e</h4>
+              <p><b>Trabalhamos apenas com café de excelente qualidade</b></p>
+              <a class="like" href="javascript:;">Gostei</a>
+              <div class="send-email">
+                <h4>Gostou?</h4>
+                <p><b>Mande o seu e-mail pra gente e nós avisaremos o dia que esse prato estará disponível novamente na casa! :-) </b></p>
+                <input type="text" placeholder="nome@mail.com.br">
+                <button>Enviar</button>
+                <a class="close" href="javascript:;">Fechar</a>
+              </div>
+            </div>
+            <div class="item col-md-4" data-item="6">
+              <img src="data/voce-no-bastro/1.jpg" align="center" width="100%">
+              <h4>Nome do Patro f</h4>
+              <p><b>Trabalhamos apenas com café de excelente qualidade</b></p>
+              <a class="like" href="javascript:;">Gostei</a>
+              <div class="send-email">
+                <h4>Gostou?</h4>
+                <p><b>Mande o seu e-mail pra gente e nós avisaremos o dia que esse prato estará disponível novamente na casa! :-) </b></p>
+                <input type="text" placeholder="nome@mail.com.br">
+                <button>Enviar</button>
+                <a class="close" href="javascript:;">Fechar</a>
+              </div>
+            </div>
+            <div class="item col-md-4" data-item="7">
+              <img src="data/voce-no-bastro/1.jpg" align="center" width="100%">
+              <h4>Nome do Patro g</h4>
+              <p><b>Trabalhamos apenas com café de excelente qualidade</b></p>
+              <a class="like" href="javascript:;">Gostei</a>
+              <div class="send-email">
+                <h4>Gostou?</h4>
+                <p><b>Mande o seu e-mail pra gente e nós avisaremos o dia que esse prato estará disponível novamente na casa! :-) </b></p>
+                <input type="text" placeholder="nome@mail.com.br">
+                <button>Enviar</button>
+                <a class="close" href="javascript:;">Fechar</a>
+              </div>
+            </div>
+            <div class="item col-md-4" data-item="8">
+              <img src="data/voce-no-bastro/1.jpg" align="center" width="100%">
+              <h4>Nome do Patro h</h4>
+              <p><b>Trabalhamos apenas com café de excelente qualidade</b></p>
+              <a class="like" href="javascript:;">Gostei</a>
+              <div class="send-email">
+                <h4>Gostou?</h4>
+                <p><b>Mande o seu e-mail pra gente e nós avisaremos o dia que esse prato estará disponível novamente na casa! :-) </b></p>
+                <input type="text" placeholder="nome@mail.com.br">
+                <button>Enviar</button>
+                <a class="close" href="javascript:;">Fechar</a>
+              </div>
+            </div>
+            <div class="item col-md-4" data-item="9">
+              <img src="data/voce-no-bastro/1.jpg" align="center" width="100%">
+              <h4>Nome do Patro i</h4>
+              <p><b>Trabalhamos apenas com café de excelente qualidade</b></p>
+              <a class="like" href="javascript:;">Gostei</a>
+              <div class="send-email">
+                <h4>Gostou?</h4>
+                <p><b>Mande o seu e-mail pra gente e nós avisaremos o dia que esse prato estará disponível novamente na casa! :-) </b></p>
+                <input type="text" placeholder="nome@mail.com.br">
+                <button>Enviar</button>
+                <a class="close" href="javascript:;">Fechar</a>
+              </div>
+            </div>
+            <div class="item col-md-4" data-item="10">
+              <img src="data/voce-no-bastro/1.jpg" align="center" width="100%">
+              <h4>Nome do Patro j</h4>
+              <p><b>Trabalhamos apenas com café de excelente qualidade</b></p>
+              <a class="like" href="javascript:;">Gostei</a>
+              <div class="send-email">
+                <h4>Gostou?</h4>
+                <p><b>Mande o seu e-mail pra gente e nós avisaremos o dia que esse prato estará disponível novamente na casa! :-) </b></p>
+                <input type="text" placeholder="nome@mail.com.br">
+                <button>Enviar</button>
+                <a class="close" href="javascript:;">Fechar</a>
+              </div>
+            </div>
+          </div>
+
+        </section>
+        <!-- YOU-IN-BASTRO -->
+
+
+
+        <!-- MAPS -->
+        <section id="map">
+          <div class="title wow fadeInUp" data-wow-offset="50">
+            <div class="container">
+              <h2>Mapa</h2>
+            </div>
+          </div> 
+
+          <div class="map container-fluid">
+            <div id="map-canvas" class="google col-md-12"></div>          
+          </div>
+
+        </section>
+        <!-- END MAPS -->
+
+        <!-- CONTACT -->
+        <section id="contact"> 
+          <div class="title wow fadeInUp" data-wow-offset="50">
+            <div class="container">
+              <h2>Contato</h2>
+            </div>
+          </div>   
+          <div class="content">
+            <div class="container">          
+              <div class="col-md-6">
+                <p><b>Localização</b><br>
+                Rua Joaquim Floriano, 122 - Itaim Bibi, SP</p>
+                <p><b>Telefone</b><br>
+                (11) 99999-9999</p>
+                <p><b>Horário de Funcionamento</b><br>
+                7hs até as 17hs de seg a sex. </p>
+                <p><b>Redes Sociais</b></p>  
+                <div class="social">
+                  <a href="javascript:;" class="face">Facebook</a>
+                  <a href="javascript:;" class="twitter">Twiter</a>
+                  <a href="javascript:;" class="pinterest">Pinterest</a>
+                </div>            
+              </div>
+              <div class="col-md-6">
+                <form id="formRegister" name="formRegister">
+                    <input class="name" type="text" name="nome" id="nome" placeholder="Nome">
+
+                    <input class="email" type="text" name="email" id="email" placeholder="Email">
+
+                    <input class="assunto" type="text" name="assunto" id="assunto" placeholder="Assunto">
+                  
+                    <textarea name="mensagem" id="mensagem">Menssagem</textarea>
+                    <button>Enviar</button>
+                  
+                </form>
+              </div>
+            </div>
+          </div>
+
+        </section>
+        <!-- END CONTACT -->
+        
+        <!-- FOOTER -->
+        <footer class="hidden-xs">
+          <div class="container">
+            <div class="logo col-sm-1"></div>
+            <div class="list col-sm-11">
+              <ul>
+                <li>Rua Joaquim Floriano, 122 - Itaim Bibi, SP</li>
+                <li>(11) 99999-9999</li>
+                <li>7hs até as 17hs de seg a sex.</li>
+              </ul>
+            </div>
+          </div>
+        </footer>
+        <!-- END FOOTER -->      
+      </div>
+
+      <!-- MODAL -->
+      <section id="modal" style="display: block;">
+
+        <div class="container">
+          <div class="close-modal"><a href="javascript:;">Fechar</a></div>
+         
+          <div id="cafes" class="row modal">  
+            <div class="col-md-6 col-sm-12">
+              <h3>Cafés</h3>
+              <div class="col-md-6 col-sm-6">
+                
+                <div class="item-menu">
+                  <div class="title-menu">Espresso </div>
+                  <div class="txt"></div>
+                  <div class="types"><span class="hot">Quente</span> / <span class="cold">Frio</span></div>                
+                </div>
+                <div class="item-menu">
+                  <div class="title-menu">Doppio</div>
+                  <div class="txt">Duas doses de espresso</div>
+                  <div class="types"><span class="hot">Quente</span> / <span class="cold">Frio</span></div>                 
+                </div>
+                <div class="item-menu">
+                  <div class="title-menu">Macchiato </div>
+                  <div class="txt">Espresso com espuma de leite</div>
+                  <div class="types"><span class="hot">Quente</span></div>                 
+                </div>
+                <div class="item-menu">
+                  <div class="title-menu">Latte </div>
+                  <div class="txt">Espresso com leite cremoso</div>
+                  <div class="types"><span class="hot">Quente</span> </div>                 
+                </div>
+                <div class="item-menu">
+                  <div class="title-menu">Cappuccino (P ou G) </div>
+                  <div class="txt">Espresso, leite cremoso polvilhado com cacau e/ou canela em pó</div>
+                  <div class="types"><span class="hot">Quente</span> </div>                 
+                </div>
+                <div class="item-menu">
+                  <div class="title-menu">Cappuccino Especial </div>
+                  <div class="txt">Cappuccino com leite condensado</div>
+                  <div class="types"><span class="hot">Quente</span> </div>                 
+                </div>
+                <div class="item-menu">
+                  <div class="title-menu">Moccha (P ou G) </div>
+                  <div class="txt">Espresso, leite cremoso e ganache de chocolate</div>
+                  <div class="types"><span class="hot">Quente</span> </div>                 
+                </div>
+                <div class="item-menu">
+                  <div class="title-menu">Moccha Ovomaltine (P ou G) </div>
+                  <div class="txt">Espresso, leite cremoso e Ovomaltine</div>
+                  <div class="types"><span class="hot">Quente</span> / <span class="cold">Frio</span></div>                 
+                </div>
+
+              </div>
+              <div class="col-md-6 col-sm-6">
+                <div class="item-menu">
+                  <div class="title-menu">Nutella (P ou G) </div>
+                  <div class="txt">Espresso, leite cremoso e muita Nutella</div>
+                  <div class="types"><span class="hot">Quente</span> </div>                 
+                </div>
+                <div class="item-menu">
+                  <div class="title-menu">Café Coado na Hora </div>
+                  <div class="txt"></div>
+                  <div class="types"><span class="hot">Quente</span> </div>                 
+                </div>
+                <div class="item-menu">
+                  <div class="title-menu">Café Bastrô </div>
+                  <div class="txt">Espresso, leite, essência de macadâmia, leite condensado e café moído</div>
+                  <div class="types"><span class="hot">Quente</span> / <span class="cold">Frio</span></div>                 
+                </div>
+                <div class="item-menu">
+                  <div class="title-menu">Café África </div>
+                  <div class="txt">Espresso, espuma de leite e licor Amarula</div>
+                  <div class="types"><span class="hot">Quente</span> </div>                 
+                </div>
+                <div class="item-menu">
+                  <div class="title-menu">Café do Padre </div>
+                  <div class="txt">Espresso, espuma de leite e Frangelico</div>
+                  <div class="types"><span class="hot">Quente</span> </div>                 
+                </div>
+                <div class="item-menu">
+                  <div class="title-menu">Café Baileys </div>
+                  <div class="txt">Espresso, espuma de leite e licor Baileys</div>
+                  <div class="types"><span class="hot">Quente</span> / <span class="cold">Frio</span></div>                 
+                </div>
+                <div class="item-menu">
+                  <div class="title-menu">Café Amaretto </div>
+                  <div class="txt">Espresso, espuma de leite e Amaretto</div>
+                  <div class="types"><span class="hot">Quente</span> / <span class="cold">Frio</span></div>                 
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-3 col-sm-6">
+              <h4>Outros</h4>
+              <div class="item-menu">
+                <div class="title-menu">Chocolate (P ou G) </div>
+                <div class="txt">Leite cremoso com chocolate</div>
+                <div class="types"><span class="hot">Quente</span> / <span class="cold">Frio</span></div>                 
+              </div>
+              <div class="item-menu">
+                <div class="title-menu">Chá Orgânico </div>
+                <div class="txt"></div>
+                <div class="types"><span class="hot">Quente</span> / <span class="cold">Frio</span></div>                 
+              </div>
+              <div class="item-menu">
+                <div class="title-menu">Latte Chai </div>
+                <div class="txt">Especiarias indianas com leite</div>
+                <div class="types"><span class="hot">Quente</span> / <span class="cold">Frio</span></div>                 
+              </div>
+              <div class="item-menu">
+                <div class="title-menu">Chá Natural de Hortelã </div>
+                <div class="txt"></div>
+                <div class="types"><span class="hot">Quente</span> </div>                 
+              </div>
+              <div class="item-menu">
+                <div class="title-menu">Chá Lalima </div>
+                <div class="txt">Laranja, limão, mel e gengibre vaporizados</div>
+                <div class="types"><span class="hot">Quente</span> </div>                 
+              </div>
+            </div>
+
+            <div class="col-md-3 col-sm-6">
+              <h4>Extras</h4>              
+              <div class="item-menu">
+                <div class="title-menu">Dose de Licor Importado</div>
+                <div class="txt"></div>
+                <div class="types"></div>                
+              </div>
+              <div class="item-menu">
+                <div class="title-menu">Porção de Chantilly</div>
+                <div class="txt"></div>
+                <div class="types"></div>                
+              </div>
+              <div class="item-menu">
+                <div class="title-menu">Dose extra de Espresso em qualquer bebida</div>
+                <div class="txt"></div>
+                <div class="types"></div>                
+              </div>   
+            </div>
+
+          </div>
+
+          <div id="sandubas" class="row modal">
+            <h3>Sandubas</h3>
+            <div class="col-md-6 col-sm-12">
+              <h4>Tradicionais</h4>
+              <div class="item-menu">
+                <div class="title-menu">Nos pães: francês, francês integral, forma, forma integral, sírio ou baguete</div>
+                <div class="txt"></div>
+                <div class="types"></div>                
+              </div>
+              <div class="col-md-6 col-sm-6">
+                <div class="item-menu">
+                  <div class="title-menu">Bauru</div>
+                  <div class="txt">Queijo, presunto e tomate</div>
+                  <div class="types"><span class="hot">Quente</span> / <span class="cold">Frio</span></div>                
+                </div>
+                <div class="item-menu">
+                  <div class="title-menu">Americano</div>
+                  <div class="txt">Presunto, queijo prato, ovo frito, tomate e alface</div>
+                  <div class="types"><span class="hot">Quente</span></div>                
+                </div>
+                <div class="item-menu">
+                  <div class="title-menu">Misto</div>
+                  <div class="txt">Queijo prato e presunto</div>
+                  <div class="types"><span class="hot">Quente</span> / <span class="cold">Frio</span></div>                
+                </div>
+                <div class="item-menu">
+                  <div class="title-menu">Queijo Prato</div>
+                  <div class="txt"></div>
+                  <div class="types"><span class="hot">Quente</span> / <span class="cold">Frio</span></div>                
+                </div>
+                <div class="item-menu">
+                  <div class="title-menu">Queijo Branco </div>
+                  <div class="txt"></div>
+                  <div class="types"><span class="hot">Quente</span> / <span class="cold">Frio</span></div>                
+                </div>
+              </div>
+              <div class="col-md-6 col-sm-6">
+                <div class="item-menu">
+                  <div class="title-menu">Queijo Branco com Tomate </div>
+                  <div class="txt"></div>
+                  <div class="types"><span class="hot">Quente</span> / <span class="cold">Frio</span></div>                
+                </div>
+                <div class="item-menu">
+                  <div class="title-menu">Peito de Peru </div>
+                  <div class="txt"></div>
+                  <div class="types"><span class="hot">Quente</span> / <span class="cold">Frio</span></div>                
+                </div>
+                <div class="item-menu">
+                  <div class="title-menu">Peito de Peru com Queijo </div>
+                  <div class="txt"></div>
+                  <div class="types"><span class="hot">Quente</span> / <span class="cold">Frio</span></div>                
+                </div>
+                <div class="item-menu">
+                  <div class="title-menu">Salame</div>
+                  <div class="txt"></div>
+                  <div class="types"><span class="hot">Quente</span> / <span class="cold">Frio</span></div>                
+                </div>
+                <div class="item-menu">
+                  <div class="title-menu">Salame com Queijo </div>
+                  <div class="txt"></div>
+                  <div class="types"><span class="hot">Quente</span> / <span class="cold">Frio</span></div>                
+                </div>
+              </div>
+              
+            </div>
+
+            <div class="col-md-3 col-sm-6">
+              <h4>Naturais</h4>
+              <div class="item-menu">
+                <div class="title-menu">Frango</div>
+                <div class="txt">Frango desfiado, salsão, uva-passa, pequena quantidade de maionese light, cenoura ralada e alface</div>
+                <div class="types"></div>                
+              </div>
+              <div class="item-menu">
+                <div class="title-menu">Queijo Branco</div>
+                <div class="txt">Queijo branco, orégano, tomate, cenoura ralada e alface</div>
+                <div class="types"></div>                
+              </div>
+              <div class="item-menu">
+                <div class="title-menu">Atum</div>
+                <div class="txt">Atum, salsão, mostarda, pequena quantidade de maionese light, cenoura ralada e alface</div>
+                <div class="types"></div>                
+              </div>    
+            </div>
+
+            <div class="col-md-3 col-sm-6">
+              <h4>Especiais</h4>
+              <div class="item-menu">
+                <div class="title-menu">Peito de Peru Especial</div>
+                <div class="txt">Peito de peru com pasta suave de requeijão cremoso com gorgonzola na baguete</div>
+                <div class="types"></div>                
+              </div>
+              <div class="item-menu">
+                <div class="title-menu">Salmão Defumado</div>
+                <div class="txt">Cream cheese, alcaparras e salmão defumado no pão de forma integral</div>
+                <div class="types"></div>                
+              </div>
+              <div class="item-menu">
+                <div class="title-menu">Queijo e Tomate Assado</div>
+                <div class="txt">Queijo meia cura, tomates assados e marinados com especiarias e azeite extra virgem na baguete prensada </div>
+                <div class="types"></div>                
+              </div>
+              <div class="item-menu">
+                <div class="title-menu">Damasco</div>
+                <div class="txt">Peito de peru, damasco e brie no pão frânces integral</div>
+                <div class="types"></div>                
+              </div>
+            </div>
+          </div>
+
+
+          <div id="bebidas" class="row modal">  
+            <div class="col-md-3 col-sm-6">
+              <h3>Bebidas</h3>
+              <div class="item-menu">
+                <div class="title-menu">Água com Gás São Lourenço</div>
+                <div class="txt"></div>
+                <div class="types"></div>                
+              </div>
+              <div class="item-menu">
+                <div class="title-menu">Água sem Gás São Lourenço</div>
+                <div class="txt"></div>
+                <div class="types"></div>                 
+              </div>
+              <div class="item-menu">
+                <div class="title-menu">Mate Gelado com Limão e Hortelã</div>
+                <div class="txt"></div>
+                <div class="types"></div>                 
+              </div>
+              <div class="item-menu">
+                <div class="title-menu">Refrigerante Lata</div>
+                <div class="txt">Coca-Cola, Guaraná, Soda e Água Tônica</div>
+                <div class="types"></div>                 
+              </div>
+              <div class="item-menu">
+                <div class="title-menu">Schweppes Citrus</div>
+                <div class="txt"></div>
+                <div class="types"></div>                 
+              </div>
+              <div class="item-menu">
+                <div class="title-menu">Cerveja Long Neck</div>
+                <div class="txt">Heineken ou Stella Artois</div>
+                <div class="types"></div>                 
+              </div>
+            </div>
+
+            <div class="col-md-6 col-sm-12">
+              <h4>Sucos</h4>
+              <div class="col-md-6 col-sm-6">
+                
+                <div class="item-menu">
+                  <div class="title-menu">Abacaxi</div>
+                  <div class="txt"></div>
+                  <div class="types"></div>                 
+                </div>
+                <div class="item-menu">
+                  <div class="title-menu">Abacaxi com Hortelã</div>
+                  <div class="txt"></div>
+                  <div class="types"></div>                 
+                </div>
+                <div class="item-menu">
+                  <div class="title-menu">Abacaxi com Gengibre</div>
+                  <div class="txt"></div>
+                  <div class="types"></div>                 
+                </div>
+                <div class="item-menu">
+                  <div class="title-menu">Limão</div>
+                  <div class="txt"></div>
+                  <div class="types"></div>                 
+                </div>
+                <div class="item-menu">
+                  <div class="title-menu">Maracujá</div>
+                  <div class="txt"></div>
+                  <div class="types"></div>                 
+                </div>
+                <div class="item-menu">
+                  <div class="title-menu">Melancia</div>
+                  <div class="txt"></div>
+                  <div class="types"></div>                 
+                </div>
+                <div class="item-menu">
+                  <div class="title-menu">Melancia com Maracujá</div>
+                  <div class="txt"></div>
+                  <div class="types"></div>                 
+                </div>
+                <div class="item-menu">
+                  <div class="title-menu">Laranja com Beterraba</div>
+                  <div class="txt"></div>
+                  <div class="types"></div>                 
+                </div>              
+              </div>
+              <div class="col-md-6 col-sm-6">
+                <div class="item-menu">
+                  <div class="title-menu">Laranja com Cenoura</div>
+                  <div class="txt"></div>
+                  <div class="types"></div>                 
+                </div>              
+                <div class="item-menu">
+                  <div class="title-menu">Laranja com Mamão</div>
+                  <div class="txt"></div>
+                  <div class="types"></div>                 
+                </div>
+                <div class="item-menu">
+                  <div class="title-menu">Laranja com Limão e Mel</div>
+                  <div class="txt"></div>
+                  <div class="types"></div>                 
+                </div>
+                <div class="item-menu">
+                  <div class="title-menu">Laranja com Cenoura e Beterraba</div>
+                  <div class="txt"></div>
+                  <div class="types"></div>                 
+                </div>
+                <div class="item-menu">
+                  <div class="title-menu">Tangerina</div>
+                  <div class="txt"></div>
+                  <div class="types"></div>                 
+                </div>
+                <div class="item-menu">
+                  <div class="title-menu">Limonada Suíça</div>
+                  <div class="txt">Limão com casca batido com gelo, água e leite condensado</div>
+                  <div class="types"></div>                 
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-3 col-sm-6">
+              <h4>Vitaminas e Iogurtes</h4>
+              <div class="item-menu">
+                <div class="title-menu">Iogurte Batido</div>
+                <div class="txt"></div>
+                <div class="types"></div>                
+              </div>
+              <div class="item-menu">
+                <div class="title-menu">Iogurte Batido com Leite</div>
+                <div class="txt"></div>
+                <div class="types"></div>                
+              </div>
+              <div class="item-menu">
+                <div class="title-menu">Iogurte Batido com Leite e Canela</div>
+                <div class="txt"></div>
+                <div class="types"></div>                
+              </div>
+              <div class="item-menu">
+                <div class="title-menu">Iogurte Batido com Frutas</div>
+                <div class="txt"></div>
+                <div class="types"></div>                
+              </div>
+              <div class="item-menu">
+                <div class="title-menu">Vitamina Mista Batida com Leite</div>
+                <div class="txt">Mamão e banana</div>
+                <div class="types"></div>                
+              </div>
+              <div class="item-menu">
+                <div class="title-menu">Vitamina Mista com Laranja</div>
+                <div class="txt">Mamão e banana</div>
+                <div class="types"></div>                
+              </div>
+              <div class="item-menu">
+                <div class="title-menu">Vitamina Mista com Aveia e Leite</div>
+                <div class="txt"></div>
+                <div class="types"></div>                
+              </div>
+            </div>
+
+          </div>
+
+
+          <div id="saladas-quiches" class="row modal">  
+            <h3>Saladas & Quiches</h3>
+            <div class="col-md-4 col-sm-12">
+              <h3>Saladas</h3>
+              <div class="item-menu">
+                <div class="title-menu">Molhos: da casa (laranja, mostarda e mel), vinagrete ou molho cremoso com gorgonzola</div>
+                <div class="txt"></div>
+                <div class="types"></div>                
+              </div>
+              <div class="item-menu">
+                <div class="title-menu">De Folhas</div>
+                <div class="txt">Mix de folhas, tomate cereja, cenoura ralada, beterraba ralada e azeitonas</div>
+                <div class="types"></div>                 
+              </div>
+              <div class="item-menu">
+                <div class="title-menu">Caesar</div>
+                <div class="txt">Mix de folhas, tomate cereja, tiras de filé de frango grelhado, croutons e queijo parmesão ralado</div>
+                <div class="types"></div>                 
+              </div>
+              <div class="item-menu">
+                <div class="title-menu">Caprese Bastrô</div>
+                <div class="txt">Mix de folhas, tomate, mussarela de búfala e folhas de manjericão </div>
+                <div class="types"></div>                 
+              </div>            
+            </div>
+            <div class="col-md-4 col-sm-6">
+              <h4>Quiches</h4>              
+              <div class="item-menu">
+                <div class="title-menu">Todas as quiches contêm ovos e creme de leite</div>
+                <div class="txt"></div>
+                <div class="types"></div>                 
+              </div>
+              <div class="item-menu">
+                <div class="title-menu">Alho-Poró</div>
+                <div class="txt">Alho-poró e queijo parmesão</div>
+                <div class="types"></div>                 
+              </div>
+              <div class="item-menu">
+                <div class="title-menu">Escarola</div>
+                <div class="txt">Escarola refogada, uva-passa e queijo parmesão</div>
+                <div class="types"></div>                 
+              </div>
+              <div class="item-menu">
+                <div class="title-menu">Lorraine</div>
+                <div class="txt">Bacon e queijo meia cura</div>
+                <div class="types"></div>                 
+              </div>            
+            </div>
+
+            <div class="col-md-4 col-sm-6">
+              <h4>Omeletes</h4>
+              <div class="item-menu">
+                <div class="title-menu">Omelete Simples com Dois Ovos</div>
+                <div class="txt"></div>
+                <div class="types"></div>                
+              </div>
+              <div class="item-menu">
+                <div class="title-menu">Omelete Especial</div>
+                <div class="txt">Com dois recheios a escolher: peito de peru, cebola, mussarela, queijo meia cura, champignon, tomate</div>
+                <div class="types"></div>                
+              </div>            
+            </div>
+
+          </div>
+
+
+          <div id="paes-salgados" class="row modal">            
+            <div class="col-md-4 col-sm-12">    
+              <h3>Pães & Salgados</h3>        
+              <div class="item-menu">
+                <div class="title-menu">Pão de Queijo</div>
+                <div class="txt"></div>
+                <div class="types"></div>                
+              </div>
+              <div class="item-menu">
+                <div class="title-menu">Pão Francês na Chapa com Manteiga</div>
+                <div class="txt"></div>
+                <div class="types"></div>                 
+              </div>
+              <div class="item-menu">
+                <div class="title-menu">Pão Francês na Chapa com Requeijão</div>
+                <div class="txt"></div>
+                <div class="types"></div>                 
+              </div>
+              <div class="item-menu">
+                <div class="title-menu">Baguete na Chapa com Manteiga</div>
+                <div class="txt"></div>
+                <div class="types"></div>                 
+              </div>    
+              <div class="item-menu">
+                <div class="title-menu">Baguete na Chapa com Requeijão</div>
+                <div class="txt"></div>
+                <div class="types"></div>                
+              </div>
+              <div class="item-menu">
+                <div class="title-menu">Pão de Forma na Chapa com Manteiga</div>
+                <div class="txt"></div>
+                <div class="types"></div>                 
+              </div>
+              <div class="item-menu">
+                <div class="title-menu">Pão de Forma Torrado com Geleia </div>
+                <div class="txt"></div>
+                <div class="types"></div>                 
+              </div>
+              <div class="item-menu">
+                <div class="title-menu">Pão de Forma Torrado com Ovo</div>
+                <div class="txt"></div>
+                <div class="types"></div>                 
+              </div>         
+            </div>
+            <div class="col-md-4 col-sm-8">
+              <h4>Tostex</h4>              
+              <div class="item-menu">
+                <div class="title-menu">Peça nos pães: Forma ou Forma Integral</div>
+                <div class="txt"></div>
+                <div class="types"></div>                 
+              </div>
+              <div class="item-menu">
+                <div class="title-menu">Queijo Prato</div>
+                <div class="txt"></div>
+                <div class="types"></div>                 
+              </div>
+              <div class="item-menu">
+                <div class="title-menu">Queijo Meia Cura com Tomate e Manjericão</div>
+                <div class="txt"></div>
+                <div class="types"></div>                 
+              </div>
+              <div class="item-menu">
+                <div class="title-menu">Queijo Prato e Peito de Peru</div>
+                <div class="txt"></div>
+                <div class="types"></div>                 
+              </div>   
+              <div class="item-menu">
+                <div class="title-menu">Presunto e Queijo Prato</div>
+                <div class="txt"></div>
+                <div class="types"></div>                 
+              </div>
+              <div class="item-menu">
+                <div class="title-menu">Brie e Peito de Peru</div>
+                <div class="txt"></div>
+                <div class="types"></div>                 
+              </div>
+            </div>
+
+            <div class="col-md-4 col-sm-4">
+              <h4>Extras</h4>
+              <div class="item-menu">
+                <div class="title-menu">Geleia</div>
+                <div class="txt"></div>
+                <div class="types"></div>                
+              </div>
+              <div class="item-menu">
+                <div class="title-menu">Requeijão ou Manteiga</div>
+                <div class="txt"></div>
+                <div class="types"></div>                
+              </div>  
+              <div class="item-menu">
+                <div class="title-menu">Ovo Frito</div>
+                <div class="txt"></div>
+                <div class="types"></div>                
+              </div>            
+            </div>
+
+          </div>
+
+
+          <div id="sobremesas" class="row modal">            
+            <div class="col-md-4 col-sm-6">  
+              <h3>Sobremesas</h3>          
+              <div class="item-menu">
+                <div class="title-menu">Fatia de Bolo</div>
+                <div class="txt">Cada dia uma delícia diferente</div>
+                <div class="types"></div>                
+              </div>
+              <div class="item-menu">
+                <div class="title-menu">Fatia de Pudim de Nozes</div>
+                <div class="txt"></div>
+                <div class="types"></div>                 
+              </div>
+              <div class="item-menu">
+                <div class="title-menu">Fatia de Pudim de Leite</div>
+                <div class="txt"></div>
+                <div class="types"></div>                 
+              </div>
+              <div class="item-menu">
+                <div class="title-menu">Pavê de Chocolate</div>
+                <div class="txt"></div>
+                <div class="types"></div>                 
+              </div>    
+              <div class="item-menu">
+                <div class="title-menu">Brigadeiro</div>
+                <div class="txt"></div>
+                <div class="types"></div>                
+              </div>
+              <div class="item-menu">
+                <div class="title-menu">Torta de Limão</div>
+                <div class="txt"></div>
+                <div class="types"></div>                 
+              </div>
+              <div class="item-menu">
+                <div class="title-menu">Salada de Frutas </div>
+                <div class="txt"></div>
+                <div class="types"></div>                 
+              </div>
+              <div class="item-menu">
+                <div class="title-menu">Mamão Papaia</div>
+                <div class="txt"></div>
+                <div class="types"></div>                 
+              </div>    
+              <div class="item-menu">
+                <div class="title-menu">Fatia de Fruta do Dia</div>
+                <div class="txt"></div>
+                <div class="types"></div>                 
+              </div>      
+            </div>
+            <div class="col-md-4 col-sm-6">
+              <h4>Extras</h4>              
+              <div class="item-menu">
+                <div class="title-menu">Porção de Leite Condensado </div>
+                <div class="txt"></div>
+                <div class="types"></div>                 
+              </div>
+              <div class="item-menu">
+                <div class="title-menu">Porção de Chantilly</div>
+                <div class="txt"></div>
+                <div class="types"></div>                 
+              </div>
+              <div class="item-menu">
+                <div class="title-menu">* Fazemos sobremesa sob encomenda</div>
+                <div class="txt"></div>
+                <div class="types"></div>                 
+              </div>            
+            </div>          
+
+          </div>
+
+        </div>      
+      </section>
+      <!-- END MODAL -->
     </div>
-    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>    
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    <script src="http://mynameismatthieu.com/WOW/dist/wow.min.js"></script>
-    <script src="js/lib/jquery.mask.min.js"></script>
-    <script src="js/lib/accordion.js"></script>
-    <script src="js/maps.min.js"></script>
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery.slick/1.4.1/slick.min.js"></script>
-    <!--script src="js/custom.min.js"></script-->
-    <script src="js/gallery.min.js"></script>
+
+    <!-- JAVASCRIPT -->
     <script type="text/javascript">
-      $('.center').slick({
+      //init
+      var loaderAnimation = $("#html5Loader").LoaderAnimation({
+        onComplete:function(){
+          console.log("preloader animation completed!");
+        }
+      });
+      $.html5Loader({
+          filesToLoad:'data/file.json',
+          onComplete: function () {
+            console.log("All the assets are loaded!");
+          },
+          onUpdate: loaderAnimation.update
+      });
+    </script>    
+    <script type="text/javascript" src="js/lib/wow.min.js"></script>
+    <script type="text/javascript" src="js/lib/slick.min.js"></script>
+    <script type="text/javascript" src="js/lib/accordion.js"></script>
+    <script type="text/javascript" src="js/maps.js"></script>
+    <script type="text/javascript" src="js/custom.js"></script>
+    
+    <script type="text/javascript"> 
+      // carrousel
+    $('.center').slick({
         centerMode: true,
         slidesToShow: 5,
         responsive: [
-          {
-            breakpoint: 992,
-            settings: {
-              arrows: false,
-              centerMode: true,
-              centerPadding: '40px',
-              slidesToShow: 4
+            {
+                breakpoint: 1025,
+                settings: {
+                    arrows: true,
+                    centerMode: true,
+                    centerPadding: '40px',
+                    slidesToShow: 4
+                }
+            },
+            {
+                breakpoint: 780,
+                settings: {
+                    arrows: false,
+                    centerMode: true,
+                    centerPadding: '40px',
+                    slidesToShow: 3
+                }
+            },
+            {
+                breakpoint: 480,
+                    settings: {
+                        arrows: false,
+                        centerMode: true,
+                        centerPadding: '40px',
+                        slidesToShow: 1
+                    }
             }
-          },
-          {
-            breakpoint: 768,
-            settings: {
-              arrows: false,
-              centerMode: true,
-              centerPadding: '40px',
-              slidesToShow: 3
-            }
-          },
-          {
-            breakpoint: 480,
-            settings: {
-              arrows: false,
-              centerMode: true,
-              centerPadding: '40px',
-              slidesToShow: 1
-            }
-          }
         ]
-      });
-
-      $('.like').on('click', function() {
-        var item = $(this).parent().attr('data-item');
-        $('[data-item='+item+']').find('.send-email').fadeIn();
-      });
-      $('.close').on('click', function() {
-        var item = $(this).parent().parent().attr('data-item');
-        $('[data-item='+item+']').find('.send-email').fadeOut();
-      });
-      // class for css reset 
-      if(navigator.userAgent.indexOf('Mac') != -1){
-        $('html').addClass('mac');
-      }
-      // framework to start animation css
-      wow = new WOW(
-        {
-          boxClass:     'wow',      // default
-          animateClass: 'animated', // default
-          offset:       0,          // default
-          mobile:       true,       // default
-          live:         true        // default
-        }
-      )
-      wow.init();
-
+    });   
+      //framework to start navbar
       $(document).ready(function(){var c=$("ul.navbar-nav li a");_document=$(document);navScroll={onScroll:function(){var a=_document.scrollTop();c.each(function(){var b=$(this),d=$(b.attr("attr-href")).find(">.title");d.offset().top-80<=a&&d.offset().top-80+d.parent().height()>a?(c.removeClass("active"),b.addClass("active")):b.removeClass("active")})},setup:function(){_document.on("scroll",navScroll.onScroll);c.each(function(){var a;$(this).on("click",function(b){b.preventDefault();$("a").each(function(){$(this).removeClass("active")});
       $(this).addClass("active");$('.navbar-collapse').removeClass('in').height(1);a=$(this).attr("attr-href");$("html, body").stop().animate({scrollTop:$(a+">.title").offset().top-80},500,"swing")})})}};navScroll.setup()});
     </script>
