@@ -23,7 +23,7 @@
         top:0;
         left:0;
         background-color:black;
-        background-color:rgba(255,255,255,0.95);
+        background-color:rgba(255,255,255,1);
         position:fixed;
         z-index:99999999999;
       }
@@ -41,7 +41,7 @@
 
     <!-- LOAD -->        
     <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script> 
-    <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>   
+    <script type="text/javascript" src="js/lib/jquery-1.11.1.min.js"></script>   
     <script type="text/javascript" src="js/lib/jquery.html5Loader.circular.js"></script>
     <script type="text/javascript" src="js/lib/jquery.html5Loader.min.js"></script>
     
@@ -81,56 +81,9 @@
         <!-- HOME -->
         <section id="home">  
           <div class="title"></div>
-          <div id="slide-01" class="carousel slide container-fluid hidden-xs" data-ride="carousel">           
-            <!-- Indicators -->
-            <ol class="carousel-indicators">
-              <li data-target="#slide-01" data-slide-to="0" class="active"></li>
-              <li data-target="#slide-01" data-slide-to="1"></li>
-              <li data-target="#slide-01" data-slide-to="2"></li>
-              <li data-target="#slide-01" data-slide-to="3"></li>
-            </ol>
-            <!-- Wrapper for slides -->
-            <div class="carousel-inner" role="listbox">
-              <div class="item active">            
-                <img src="data/home/1.jpg" align="center" width="100%">              
-              </div>
-              <div class="item">              
-                <img src="data/home/1.jpg" align="center" width="100%">
-              </div>
-              <div class="item">            
-                <img src="data/home/1.jpg" align="center" width="100%">
-              </div>
-              <div class="item">          
-                <img src="data/home/1.jpg" align="center" width="100%">
-              </div>
-            </div>
-          </div>
+          <div id="slide-01" class="carousel slide container-fluid hidden-xs"></div>
 
-          <div id="slide-03" class="carousel slide container-fluid visible-xs" data-ride="carousel">           
-            <!-- Indicators -->
-            <ol class="carousel-indicators">
-              <li data-target="#slide-03" data-slide-to="0" class="active"></li>
-              <li data-target="#slide-03" data-slide-to="1"></li>
-              <li data-target="#slide-03" data-slide-to="2"></li>
-              <li data-target="#slide-03" data-slide-to="3"></li>
-            </ol>
-            <!-- Wrapper for slides -->
-            <div class="carousel-inner" role="listbox">
-              <div class="item active">            
-                <img src="data/home-v2/1.jpg" align="center" width="100%">              
-              </div>
-              <div class="item">              
-                <img src="data/home-v2/1.jpg" align="center" width="100%">
-              </div>
-              <div class="item">            
-                <img src="data/home-v2/1.jpg" align="center" width="100%">
-              </div>
-              <div class="item">          
-                <img src="data/home-v2/1.jpg" align="center" width="100%">
-              </div>
-            </div>
-          </div>
-
+          <div id="slide-03" class="carousel slide container-fluid visible-xs"></div>
         </section>
         <!-- END HOME -->
         
@@ -143,18 +96,7 @@
           </div>
           <div class="blackboard">
             <div class="container">
-              <div class="col-md-12"><h3>Prato do Dia</h3></div>
-              <div class="col-md-4 col-sm-6">
-                <h4>Cozido de Filé Mignon</h4>
-                <p>Acompanhado de arroz branco e salada de folhas verdes</p>
-              </div>
-              <div class="col-md-4 hidden-sm hidden-xs">              
-                <img class=" hidden-sm hidden-xs" src="data/prato-do-dia/1.png">
-              </div>
-              <div class="col-md-4 col-sm-6">
-                <h4>Bife de Chorizo</h4>
-                <p class="last-child">Acompanhado de batata gratinada e arroz à grega</p>
-              </div>
+              <div class="col-md-12"><h3>Prato do Dia<br><span class="actual-date"></span></h3></div>              
             </div>
           </div>
           <div class="content">
@@ -270,139 +212,7 @@
               <h2>Você no Bastrô</h2>
             </div>
           </div>   
-          <div class="container-fluid center" data-slick='{"slidesToScroll": 1}'>           
-            <div class="item col-md-4" data-item="1">
-              <img src="data/voce-no-bastro/1.jpg" align="center" width="100%">
-              <h4>Nome do Patro a</h4>
-              <p><b>Trabalhamos apenas com café de excelente qualidade</b></p>
-              <a class="like" href="javascript:;">Gostei</a>
-              <div class="send-email">
-                <h4>Gostou?</h4>
-                <p><b>Mande o seu e-mail pra gente e nós avisaremos o dia que esse prato estará disponível novamente na casa! :-) </b></p>
-                <input type="text" placeholder="nome@mail.com.br">
-                <button>Enviar</button>
-                <a class="close" href="javascript:;">Fechar</a>
-              </div>            
-            </div>
-            <div class="item col-md-4" data-item="2">
-              <img src="data/voce-no-bastro/1.jpg" align="center" width="100%">
-              <h4>Nome do Patro b</h4>
-              <p><b>Trabalhamos apenas com café de excelente qualidade</b></p>
-              <a class="like" href="javascript:;">Gostei</a>
-              <div class="send-email">
-                <h4>Gostou?</h4>
-                <p><b>Mande o seu e-mail pra gente e nós avisaremos o dia que esse prato estará disponível novamente na casa! :-) </b></p>
-                <input type="text" placeholder="nome@mail.com.br">
-                <button>Enviar</button>
-                <a class="close" href="javascript:;">Fechar</a>
-              </div>
-            </div>
-            <div class="item col-md-4" data-item="3">
-              <img src="data/voce-no-bastro/1.jpg" align="center" width="100%">
-              <h4>Nome do Patro c</h4>
-              <p><b>Trabalhamos apenas com café de excelente qualidade</b></p>
-              <a class="like" href="javascript:;">Gostei</a>
-              <div class="send-email">
-                <h4>Gostou?</h4>
-                <p><b>Mande o seu e-mail pra gente e nós avisaremos o dia que esse prato estará disponível novamente na casa! :-) </b></p>
-                <input type="text" placeholder="nome@mail.com.br">
-                <button>Enviar</button>
-                <a class="close" href="javascript:;">Fechar</a>
-              </div>
-            </div>
-            <div class="item col-md-4" data-item="4">
-              <img src="data/voce-no-bastro/1.jpg" align="center" width="100%">
-              <h4>Nome do Patro d</h4>
-              <p><b>Trabalhamos apenas com café de excelente qualidade</b></p>
-              <a class="like" href="javascript:;">Gostei</a>
-              <div class="send-email">
-                <h4>Gostou?</h4>
-                <p><b>Mande o seu e-mail pra gente e nós avisaremos o dia que esse prato estará disponível novamente na casa! :-) </b></p>
-                <input type="text" placeholder="nome@mail.com.br">
-                <button>Enviar</button>
-                <a class="close" href="javascript:;">Fechar</a>
-              </div>
-            </div>
-            <div class="item col-md-4" data-item="5">
-              <img src="data/voce-no-bastro/1.jpg" align="center" width="100%">
-              <h4>Nome do Patro e</h4>
-              <p><b>Trabalhamos apenas com café de excelente qualidade</b></p>
-              <a class="like" href="javascript:;">Gostei</a>
-              <div class="send-email">
-                <h4>Gostou?</h4>
-                <p><b>Mande o seu e-mail pra gente e nós avisaremos o dia que esse prato estará disponível novamente na casa! :-) </b></p>
-                <input type="text" placeholder="nome@mail.com.br">
-                <button>Enviar</button>
-                <a class="close" href="javascript:;">Fechar</a>
-              </div>
-            </div>
-            <div class="item col-md-4" data-item="6">
-              <img src="data/voce-no-bastro/1.jpg" align="center" width="100%">
-              <h4>Nome do Patro f</h4>
-              <p><b>Trabalhamos apenas com café de excelente qualidade</b></p>
-              <a class="like" href="javascript:;">Gostei</a>
-              <div class="send-email">
-                <h4>Gostou?</h4>
-                <p><b>Mande o seu e-mail pra gente e nós avisaremos o dia que esse prato estará disponível novamente na casa! :-) </b></p>
-                <input type="text" placeholder="nome@mail.com.br">
-                <button>Enviar</button>
-                <a class="close" href="javascript:;">Fechar</a>
-              </div>
-            </div>
-            <div class="item col-md-4" data-item="7">
-              <img src="data/voce-no-bastro/1.jpg" align="center" width="100%">
-              <h4>Nome do Patro g</h4>
-              <p><b>Trabalhamos apenas com café de excelente qualidade</b></p>
-              <a class="like" href="javascript:;">Gostei</a>
-              <div class="send-email">
-                <h4>Gostou?</h4>
-                <p><b>Mande o seu e-mail pra gente e nós avisaremos o dia que esse prato estará disponível novamente na casa! :-) </b></p>
-                <input type="text" placeholder="nome@mail.com.br">
-                <button>Enviar</button>
-                <a class="close" href="javascript:;">Fechar</a>
-              </div>
-            </div>
-            <div class="item col-md-4" data-item="8">
-              <img src="data/voce-no-bastro/1.jpg" align="center" width="100%">
-              <h4>Nome do Patro h</h4>
-              <p><b>Trabalhamos apenas com café de excelente qualidade</b></p>
-              <a class="like" href="javascript:;">Gostei</a>
-              <div class="send-email">
-                <h4>Gostou?</h4>
-                <p><b>Mande o seu e-mail pra gente e nós avisaremos o dia que esse prato estará disponível novamente na casa! :-) </b></p>
-                <input type="text" placeholder="nome@mail.com.br">
-                <button>Enviar</button>
-                <a class="close" href="javascript:;">Fechar</a>
-              </div>
-            </div>
-            <div class="item col-md-4" data-item="9">
-              <img src="data/voce-no-bastro/1.jpg" align="center" width="100%">
-              <h4>Nome do Patro i</h4>
-              <p><b>Trabalhamos apenas com café de excelente qualidade</b></p>
-              <a class="like" href="javascript:;">Gostei</a>
-              <div class="send-email">
-                <h4>Gostou?</h4>
-                <p><b>Mande o seu e-mail pra gente e nós avisaremos o dia que esse prato estará disponível novamente na casa! :-) </b></p>
-                <input type="text" placeholder="nome@mail.com.br">
-                <button>Enviar</button>
-                <a class="close" href="javascript:;">Fechar</a>
-              </div>
-            </div>
-            <div class="item col-md-4" data-item="10">
-              <img src="data/voce-no-bastro/1.jpg" align="center" width="100%">
-              <h4>Nome do Patro j</h4>
-              <p><b>Trabalhamos apenas com café de excelente qualidade</b></p>
-              <a class="like" href="javascript:;">Gostei</a>
-              <div class="send-email">
-                <h4>Gostou?</h4>
-                <p><b>Mande o seu e-mail pra gente e nós avisaremos o dia que esse prato estará disponível novamente na casa! :-) </b></p>
-                <input type="text" placeholder="nome@mail.com.br">
-                <button>Enviar</button>
-                <a class="close" href="javascript:;">Fechar</a>
-              </div>
-            </div>
-          </div>
-
+          <div id="slick-list" class="container-fluid center"></div>       
         </section>
         <!-- YOU-IN-BASTRO -->
 
@@ -1134,13 +944,128 @@
     <!-- JAVASCRIPT -->
     <script type="text/javascript">
       //init
+      var actualDate = new Date();
+      var dia = actualDate.getDate();
+      var mes = actualDate.getMonth();
+      var ano = actualDate.getFullYear();
+      $('.actual-date').text(dia+'/'+(mes+1)+'/'+ano);
       var loaderAnimation = $("#html5Loader").LoaderAnimation({
         onComplete:function(){
           console.log("preloader animation completed!");
+          // carrousel
+          $('#slick-list').slick({
+              centerMode: true,
+              slidesToShow: 5,
+              responsive: [
+                  {
+                      breakpoint: 1025,
+                      settings: {
+                          arrows: true,
+                          centerMode: true,
+                          centerPadding: '40px',
+                          slidesToShow: 4
+                      }
+                  },
+                  {
+                      breakpoint: 780,
+                      settings: {
+                          arrows: false,
+                          centerMode: true,
+                          centerPadding: '40px',
+                          slidesToShow: 3
+                      }
+                  },
+                  {
+                      breakpoint: 480,
+                          settings: {
+                              arrows: false,
+                              centerMode: true,
+                              centerPadding: '40px',
+                              slidesToShow: 1
+                          }
+                  }
+              ]
+          }); 
         }
       });
       $.html5Loader({
           filesToLoad:'data/file.json',
+          onBeforeLoad: function () {            
+
+            console.log('index');
+            $.get( 'data/content.json', function( index ) {
+              console.log('index');
+              
+              var homeContent = index.home;
+              var menuContent = index.menu;
+              var bastroContent = index.voceNoBastro;
+
+              var slideDesktop = '';
+              var slideMobile = '';
+              for (var i = 0; i < homeContent[0].desktop.length; i++) {
+                if (i == 0) slideDesktop += '<ol class="carousel-indicators">';            
+                slideDesktop += '<li data-target="#slide-01" data-slide-to="'+i+'"';
+                if (i == 0) slideDesktop += 'class="active"';  
+                slideDesktop += '></li>';   
+                if (i == homeContent[0].desktop.length-1) slideDesktop += '</ol>'; 
+                if (i == 0) slideMobile += '<ol class="carousel-indicators">';            
+                slideMobile += '<li data-target="#slide-01" data-slide-to="'+i+'"';
+                if (i == 0) slideMobile += 'class="active"';  
+                slideMobile += '></li>';   
+                if (i == homeContent[0].desktop.length-1) slideMobile += '</ol>';  
+              }
+              for (var x = 0; x < homeContent[0].desktop.length; x++) {  
+                if (x == 0) slideDesktop += '<div class="carousel-inner" role="listbox">';  
+                slideDesktop += '<div class="item ';
+                if (x == 0) slideDesktop += 'active';
+                slideDesktop += '">';  
+                slideDesktop += '<img src="'+homeContent[0].desktop[x].img+'" align="center" width="100%">';  
+                slideDesktop += '</div>';  
+                if (x == homeContent[0].desktop.length-1) slideDesktop += '</div>';  
+                 
+                if (x == 0) slideMobile += '<div class="carousel-inner" role="listbox">';  
+                slideMobile += '<div class="item ';
+                if (x == 0) slideMobile += 'active';
+                slideMobile += '">';   
+                slideMobile += '<img src="'+homeContent[1].mobile[x].img+'" align="center" width="100%">';  
+                slideMobile += '</div>';  
+                if (x == homeContent[0].desktop.length-1) slideMobile += '</div>';  
+              };
+              $('#slide-01').html(slideDesktop);
+              $('#slide-03').html(slideMobile);
+
+
+              var blackboard = '';
+              for (var z = 0; z < menuContent.length; z++) {
+                if (z == 0) blackboard += '<div class="col-md-4 col-sm-12">';
+                else blackboard += '<div class="col-md-4 col-sm-6">';
+                blackboard += '<h4>'+menuContent[z].prato[0].nome+'</h4>';
+                blackboard += '<p>'+menuContent[z].prato[0].descr+'</p>';
+                blackboard += '</div>';
+              };
+              $('.blackboard>.container').append(blackboard);
+
+              var bastro = '';
+              for (var w = 0; w < bastroContent.length; w++) {
+                bastro += '<div data-id="'+bastroContent[w].item[0].id+'" class="item col-md-4" data-item="'+(w)+'">';
+                bastro += '<img src="'+bastroContent[w].item[0].img+'" align="center" width="100%">';
+                bastro += '<h4>'+bastroContent[w].item[0].nome+'</h4>';
+                bastro += '<p><b>'+bastroContent[w].item[0].descr+'</b></p>';
+                bastro += '<a class="like" href="javascript:;">Gostei</a>';
+                bastro += '<div class="send-email">';
+                bastro += '<h4>Gostou?</h4>';
+                bastro += '<p><b>Mande o seu e-mail pra gente e nós avisaremos o dia que esse prato estará disponível novamente na casa! :-) </b></p>';
+                bastro += '<input type="text" placeholder="nome@mail.com.br">';
+                bastro += '<button>Enviar</button>';
+                bastro += '<a class="close" href="javascript:;">Fechar</a>';
+                bastro += '</div>';
+                bastro += '</div>';                
+              };
+              $('#slick-list').append(bastro);
+
+            });
+
+          },
           onComplete: function () {
             console.log("All the assets are loaded!");
           },
@@ -1154,40 +1079,6 @@
     <script type="text/javascript" src="js/custom.js"></script>
     
     <script type="text/javascript"> 
-      // carrousel
-    $('.center').slick({
-        centerMode: true,
-        slidesToShow: 5,
-        responsive: [
-            {
-                breakpoint: 1025,
-                settings: {
-                    arrows: true,
-                    centerMode: true,
-                    centerPadding: '40px',
-                    slidesToShow: 4
-                }
-            },
-            {
-                breakpoint: 780,
-                settings: {
-                    arrows: false,
-                    centerMode: true,
-                    centerPadding: '40px',
-                    slidesToShow: 3
-                }
-            },
-            {
-                breakpoint: 480,
-                    settings: {
-                        arrows: false,
-                        centerMode: true,
-                        centerPadding: '40px',
-                        slidesToShow: 1
-                    }
-            }
-        ]
-    });   
       //framework to start navbar
       $(document).ready(function(){var c=$("ul.navbar-nav li a");_document=$(document);navScroll={onScroll:function(){var a=_document.scrollTop();c.each(function(){var b=$(this),d=$(b.attr("attr-href")).find(">.title");d.offset().top-80<=a&&d.offset().top-80+d.parent().height()>a?(c.removeClass("active"),b.addClass("active")):b.removeClass("active")})},setup:function(){_document.on("scroll",navScroll.onScroll);c.each(function(){var a;$(this).on("click",function(b){b.preventDefault();$("a").each(function(){$(this).removeClass("active")});
       $(this).addClass("active");$('.navbar-collapse').removeClass('in').height(1);a=$(this).attr("attr-href");$("html, body").stop().animate({scrollTop:$(a+">.title").offset().top-80},500,"swing")})})}};navScroll.setup()});
