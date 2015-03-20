@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="pt-BR">
   <head>
     
@@ -67,7 +67,7 @@
             <ul class="nav navbar-nav">
               <li><a href="#" attr-href="#home">Home</a></li>
               <li><a href="javascript:;" attr-href="#menu">Cardápio</a></li>
-              <li><a href="javascript:;" attr-href="#highlights">Dieferenciais</a></li>
+              <li><a href="javascript:;" attr-href="#highlights">Diferenciais</a></li>
               <li><a href="javascript:;" attr-href="#the-bastro">O Bastrô</a></li>            
               <li><a href="javascript:;" attr-href="#you-in-bastro">Você no Bastrô</a></li>
               <li><a href="javascript:;" attr-href="#contact">Contato</a></li>
@@ -81,9 +81,9 @@
         <!-- HOME -->
         <section id="home">  
           <div class="title"></div>
-          <div id="slide-01" class="carousel slide container-fluid hidden-xs"></div>
+            <div id="slide-01" class="carousel slide container-fluid hidden-xs" data-ride="carousel"></div>
 
-          <div id="slide-03" class="carousel slide container-fluid visible-xs"></div>
+            <div id="slide-03" class="carousel slide container-fluid visible-xs" data-ride="carousel"></div>
         </section>
         <!-- END HOME -->
         
@@ -161,9 +161,9 @@
               </div>
               <div class="highlight col-md-4 col-sm-4">
                 <hr class="up">
-                <h4>Produtos Orgânicos</h4>
-                <p><b>Alimentação saudável é marca registrada do Bastrô</b></p>
-                <p>Em nosso restaurante, os alimentos são livres de agrotóxicos e outros produtos químicos, contribuindo para sua saúde e bem-estar. Visite a nossa cozinha! </p>
+                <h4>Alimentação Saudável</h4>
+                <p><b>Prezamos por mais qualidade de vida e bem-estar</b></p>
+                <p>Além do restaurante onde servimos pratos baseados em uma alimentação mais natural e com menos conservantes, o Bastrô possui produtos e cafés orgânicos à venda, para você adotar esse hábito em qualquer lugar. Venha conhecer!</p>
                 <hr class="down">
               </div>           
           </div>
@@ -246,15 +246,15 @@
                 <p><b>Localização</b><br>
                 Rua Joaquim Floriano, 122 - Itaim Bibi, SP</p>
                 <p><b>Telefone</b><br>
-                (11) 99999-9999</p>
+                (11) 3078-4005 </p>
                 <p><b>Horário de Funcionamento</b><br>
                 7hs até as 17hs de seg a sex. </p>
-                <p><b>Redes Sociais</b></p>  
+                <!--p><b>Redes Sociais</b></p>  
                 <div class="social">
                   <a href="javascript:;" class="face">Facebook</a>
                   <a href="javascript:;" class="twitter">Twiter</a>
                   <a href="javascript:;" class="pinterest">Pinterest</a>
-                </div>            
+                </div-->            
               </div>
               <div class="col-md-6">
                 <form id="formRegister" name="formRegister">
@@ -264,7 +264,8 @@
 
                     <input class="assunto" type="text" name="assunto" id="assunto" placeholder="Assunto">
                   
-                    <textarea name="mensagem" id="mensagem">Menssagem</textarea>
+                    <textarea name="mensagem" id="mensagem">Mensagem</textarea>
+                    <p id="msg"></p>
                     <button>Enviar</button>
                   
                 </form>
@@ -282,7 +283,7 @@
             <div class="list col-sm-11">
               <ul>
                 <li>Rua Joaquim Floriano, 122 - Itaim Bibi, SP</li>
-                <li>(11) 99999-9999</li>
+                <li>(11) 3078-4005 </li>
                 <li>7hs até as 17hs de seg a sex.</li>
               </ul>
             </div>
@@ -295,7 +296,7 @@
       <section id="modal" style="display: block;">
 
         <div class="container">
-          <div class="close-modal"><a href="javascript:;">Fechar</a></div>
+          <div class="close-modal row"><a href="javascript:;">Fechar</a></div>
          
           <div id="cafes" class="row modal">  
             <div class="col-md-6 col-sm-12">
@@ -946,9 +947,15 @@
       //init
       var actualDate = new Date();
       var dia = actualDate.getDate();
-      var mes = actualDate.getMonth();
+      var mes = actualDate.getMonth() + 1;
       var ano = actualDate.getFullYear();
-      $('.actual-date').text(dia+'/'+(mes+1)+'/'+ano);
+      if (dia < 10) {
+          dia = '0' + dia;
+      }
+      if (mes < 10) {
+          mes = '0' + mes;
+      }
+      $('.actual-date').text(dia+'/'+mes+'/'+ano);
       var loaderAnimation = $("#html5Loader").LoaderAnimation({
         onComplete:function(){
           console.log("preloader animation completed!");
@@ -985,16 +992,47 @@
                           }
                   }
               ]
-          }); 
+          });
+          // modal
+          $('.close-modal a').on('click', function () {
+              $('body').css('overflow', 'auto');
+              $('#modal').hide();
+              $('#modal .row.modal').removeClass("active").hide();
+          });
+
+          $('#menu .category').each(function () {
+              $(this).on('click', function () {
+                  $('body').css('overflow', 'hidden');
+                  $('#modal').fadeIn();
+                  $('#' + $(this).find('a').attr('attr-modal')).addClass("active").show();
+              });
+          });
+          $('.close-modal a').click();
+
+            // btn-like
+          $('.like').on('click', function () {
+              var item = $(this).parent().attr('data-item');
+              $('[data-item=' + item + ']').find('.send-email').fadeIn();
+              $.ajax({
+                  type: "POST",
+                  url: "/Home/CadastraLike",
+                  data: { obj: $(this).parent().attr('data-id') },
+                  success: function (response) {
+                      //$("#divTeste").html("Sucesso ao chamar o método: " + JSON.stringify(response));
+                  }
+              });
+          });
+          $('.close').on('click', function () {
+              var item = $(this).parent().parent().parent().attr('data-item');
+              $('[data-item=' + item + ']').find('.send-email').fadeOut();
+          });
         }
       });
       $.html5Loader({
           filesToLoad:'data/file.json',
           onBeforeLoad: function () {            
 
-            console.log('index');
             $.get( 'data/content.json', function( index ) {
-              console.log('index');
               
               var homeContent = index.home;
               var menuContent = index.menu;
@@ -1054,16 +1092,19 @@
                 bastro += '<a class="like" href="javascript:;">Gostei</a>';
                 bastro += '<div class="send-email">';
                 bastro += '<h4>Gostou?</h4>';
-                bastro += '<p><b>Mande o seu e-mail pra gente e nós avisaremos o dia que esse prato estará disponível novamente na casa! :-) </b></p>';
-                bastro += '<input type="text" placeholder="nome@mail.com.br">';
-                bastro += '<button>Enviar</button>';
+                bastro += '<p><b>Mande o seu e-mail pra gente e nós avisaremos o dia que esse prato estará disponível novamente na casa!</b></p>';
+                bastro += '<form class="formRegister2">';
+                bastro += '<input type="text" class="email2" placeholder="nome@mail.com.br">';
+                bastro += '<p class="msg2"></p>';  
+                bastro += '<button type="submit">Enviar</button>';                
                 bastro += '<a class="close" href="javascript:;">Fechar</a>';
+                bastro += '</form>';
                 bastro += '</div>';
                 bastro += '</div>';                
               };
               $('#slick-list').append(bastro);
 
-            });
+            }, "json");
 
           },
           onComplete: function () {

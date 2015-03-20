@@ -1,150 +1,80 @@
-{
-	"home": [
-		{
-			"desktop": [
-				{
-					"img": "data/home/1.jpg"
-				},
-				{
-					"img": "data/home/1.jpg"
-				},
-				{
-					"img": "data/home/1.jpg"
-				},
-				{
-					"img": "data/home/1.jpg"
-				},
-				{
-					"img": "data/home/1.jpg"
-				}
-			]
-		},
-		{
-			"mobile": [
-				{
-					"img": "data/home-v2/1.jpg"
-				},
-				{
-					"img": "data/home-v2/1.jpg"
-				},
-				{
-					"img": "data/home-v2/1.jpg"
-				},
-				{
-					"img": "data/home-v2/1.jpg"
-				},
-				{
-					"img": "data/home-v2/1.jpg"
-				}
-			]
-		}
-	],
-	"menu": [
-		{
-			"prato": [
-				{
-					"nome": "Cozido de Filé Mignon",
-					"descr": "Acompanhado de arroz branco e salada de folhas verdes"
-				}
-			]
-		},
-		{
-			"prato": [
-				{
-					"nome": "Cozido de Filé Mignon",
-					"descr": "Acompanhado de arroz branco e salada de folhas verdes"
-				}
-			]
-		},
-		{
-			"prato": [
-				{
-					"nome": "Cozido de Filé Mignon",
-					"descr": "Acompanhado de arroz branco e salada de folhas verdes"
-				}
-			]
-		}
-	],
-	"voceNoBastro": [
-		{
-			"item": [
-				{
-					"id": "01",
-					"img": "data/voce-no-bastro/1.jpg",
-					"nome": "Cozido de Filé Mignon 1",
-					"descr": "Acompanhado de arroz branco e salada de folhas verdes"
-				}
-			]
-		},
-		{
-			"item": [
-				{
-					"id": "01",
-					"img": "data/voce-no-bastro/1.jpg",
-					"nome": "Cozido de Filé Mignon 2",
-					"descr": "Acompanhado de arroz branco e salada de folhas verdes"
-				}
-			]
-		},
-		{
-			"item": [
-				{
-					"id": "01",
-					"img": "data/voce-no-bastro/1.jpg",
-					"nome": "Cozido de Filé Mignon 3",
-					"descr": "Acompanhado de arroz branco e salada de folhas verdes"
-				}
-			]
-		},
-		{
-			"item": [
-				{
-					"id": "01",
-					"img": "data/voce-no-bastro/1.jpg",
-					"nome": "Cozido de Filé Mignon 4",
-					"descr": "Acompanhado de arroz branco e salada de folhas verdes"
-				}
-			]
-		},
-		{
-			"item": [
-				{
-					"id": "01",
-					"img": "data/voce-no-bastro/1.jpg",
-					"nome": "Cozido de Filé Mignon 4",
-					"descr": "Acompanhado de arroz branco e salada de folhas verdes"
-				}
-			]
-		},
-		{
-			"item": [
-				{
-					"id": "01",
-					"img": "data/voce-no-bastro/1.jpg",
-					"nome": "Cozido de Filé Mignon 4",
-					"descr": "Acompanhado de arroz branco e salada de folhas verdes"
-				}
-			]
-		},
-		{
-			"item": [
-				{
-					"id": "01",
-					"img": "data/voce-no-bastro/1.jpg",
-					"nome": "Cozido de Filé Mignon 4",
-					"descr": "Acompanhado de arroz branco e salada de folhas verdes"
-				}
-			]
-		},
-		{
-			"item": [
-				{
-					"id": "01",
-					"img": "data/voce-no-bastro/1.jpg",
-					"nome": "Cozido de Filé Mignon 5",
-					"descr": "Acompanhado de arroz branco e salada de folhas verdes"
-				}
-			]
-		}
-	]
+{ 
+    "home": [ 
+        {"desktop": [ 
+	            {"img": "data/home/2.jpg"} 
+	            ,{"img": "data/home/1.jpg"} 
+	            ,{"img": "data/home/5.jpg"} 
+	            ,{"img": "data/home/8.jpg"} 
+	            ,{"img": "data/home/10.jpg"} 
+	            ,{"img": "data/home/9.jpg"} 
+	            ,{"img": "data/home/3.jpg"} 
+	            ,{"img": "data/home/6.jpg"} 
+	            ,{"img": "data/home/4.jpg"} 
+	            ,{"img": "data/home/7.jpg"} 
+        ]}, 
+        {"mobile": [ 
+	            {"img": "data/home-v2/2.jpg"} 
+	            ,{"img": "data/home-v2/1.jpg"} 
+	            ,{"img": "data/home-v2/5.jpg"} 
+	            ,{"img": "data/home-v2/8.jpg"} 
+	            ,{"img": "data/home-v2/10.jpg"} 
+	            ,{"img": "data/home-v2/9.jpg"} 
+	            ,{"img": "data/home-v2/3.jpg"} 
+	            ,{"img": "data/home-v2/6.jpg"} 
+	            ,{"img": "data/home-v2/4.jpg"} 
+	            ,{"img": "data/home-v2/7.jpg"} 
+        ]} 
+    ], 
+    "menu": [ 
+    ], 
+    "voceNoBastro": [ 
+        {"item": [{ 
+		    "id": "1", 
+		    "img": "data/voce-no-bastro/1.jpg", 
+		    "nome": "Cozido de Filé Mignon A", 
+		    "descr": "Acompanhado de arroz branco e salada de folhas verdes" 
+	    }]} 
+        ,{"item": [{ 
+		    "id": "2", 
+		    "img": "data/voce-no-bastro/2.jpg", 
+		    "nome": "Cozido de Filé Mignon B", 
+		    "descr": "Acompanhado de arroz branco e salada de folhas verdes" 
+	    }]} 
+        ,{"item": [{ 
+		    "id": "3", 
+		    "img": "data/voce-no-bastro/3.jpg", 
+		    "nome": "Cozido de Filé Mignon C", 
+		    "descr": "Acompanhado de arroz branco e salada de folhas verdes" 
+	    }]} 
+        ,{"item": [{ 
+		    "id": "4", 
+		    "img": "data/voce-no-bastro/4.jpg", 
+		    "nome": "Cozido de Filé Mignon D", 
+		    "descr": "Acompanhado de arroz branco e salada de folhas verdes" 
+	    }]} 
+        ,{"item": [{ 
+		    "id": "5", 
+		    "img": "data/voce-no-bastro/5.jpg", 
+		    "nome": "Cozido de Filé Mignon E", 
+		    "descr": "Acompanhado de arroz branco e salada de folhas verdes" 
+	    }]} 
+        ,{"item": [{ 
+		    "id": "6", 
+		    "img": "data/voce-no-bastro/6.jpg", 
+		    "nome": "Cozido de Filé Mignon F", 
+		    "descr": "Acompanhado de arroz branco e salada de folhas verdes" 
+	    }]} 
+        ,{"item": [{ 
+		    "id": "9", 
+		    "img": "data/voce-no-bastro/9.jpg", 
+		    "nome": "Prato Teste", 
+		    "descr": "teste Rodrigo" 
+	    }]} 
+        ,{"item": [{ 
+		    "id": "10", 
+		    "img": "data/voce-no-bastro/10.jpg", 
+		    "nome": "ABC teste", 
+		    "descr": "Rodrigo" 
+	    }]} 
+    ] 
 }
